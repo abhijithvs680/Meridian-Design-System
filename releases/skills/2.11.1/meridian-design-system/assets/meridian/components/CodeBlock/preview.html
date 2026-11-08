@@ -1,0 +1,16 @@
+<!-- @dsCard group="Data display" height=360 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>CodeBlock — preview</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col">
+<div class="m-code"><div class="m-code-head"><span>Tool call · get_invoices</span><button class="m-btn m-btn-sm m-btn-ghost"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>Copy</button></div><pre><span class="c">// arguments</span>
+{
+  <span class="n">"status"</span>: <span class="s">"open"</span>,
+  <span class="n">"overdue_days_gt"</span>: <span class="k">30</span>,
+  <span class="n">"region"</span>: <span class="s">"South"</span>
+}</pre></div>
+<div class="m-code"><div class="m-code-head"><span>Agent suggestion · reminder.py</span><span></span></div><pre><span class="del">days_overdue = (today - inv.due).days</span><span class="add">days_overdue = max(0, (today - inv.due_date).days)</span></pre><div class="m-diff-actions"><button class="m-btn m-btn-sm m-btn-primary"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Accept</button><button class="m-btn m-btn-sm">Reject</button></div></div>
+</div>
+</body>
+</html>

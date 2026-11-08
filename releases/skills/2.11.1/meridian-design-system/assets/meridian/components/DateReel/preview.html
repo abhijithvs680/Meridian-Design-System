@@ -1,0 +1,23 @@
+<!-- @dsCard group="Expressive" height=230 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>DateReel — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="gap:24px"><div class="x-reel" aria-label="Schedule reminder">
+<div class="x-reel-col" tabindex="0" role="listbox" aria-label="Day"><div role="option" aria-selected="false">Mon 10</div><div role="option" aria-selected="false">Tue 11</div><div class="sel" role="option" aria-selected="true">Wed 12</div><div role="option" aria-selected="false">Thu 13</div><div role="option" aria-selected="false">Fri 14</div><div role="option" aria-selected="false">Sat 15</div></div>
+<div class="x-reel-col" tabindex="0" role="listbox" aria-label="Hour"><div role="option" aria-selected="false">8</div><div role="option" aria-selected="false">9</div><div class="sel" role="option" aria-selected="true">10</div><div role="option" aria-selected="false">11</div><div role="option" aria-selected="false">12</div><div role="option" aria-selected="false">1</div></div>
+<div class="x-reel-col" tabindex="0" role="listbox" aria-label="Minute"><div role="option" aria-selected="false">00</div><div class="sel" role="option" aria-selected="true">15</div><div role="option" aria-selected="false">30</div><div role="option" aria-selected="false">45</div></div>
+<div class="x-reel-col" tabindex="0" role="listbox" aria-label="AM or PM"><div class="sel" role="option" aria-selected="true">AM</div><div role="option" aria-selected="false">PM</div></div></div>
+<div class="m-help" id="rv" style="max-width:200px">Send reminder on <b>Wed 12, 10:15 AM</b></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var cols=[].slice.call(document.querySelectorAll('.x-reel-col'));
+cols.forEach(function(c){var it=[].slice.call(c.children),sel=it.findIndex(function(x){return x.classList.contains('sel');});c.scrollTop=sel*36;
+c.addEventListener('scroll',function(){var i=Math.round(c.scrollTop/36);it.forEach(function(x,k){x.classList.toggle('sel',k===i);x.setAttribute('aria-selected',k===i);});upd();});
+c.onkeydown=function(e){var n=e.key==='ArrowDown'?1:e.key==='ArrowUp'?-1:0;if(n){e.preventDefault();c.scrollBy({top:n*36,behavior:RM?'auto':'smooth'});}};});
+function upd(){var v=cols.map(function(c){var s=c.querySelector('.sel');return s?s.textContent:'';});document.getElementById('rv').innerHTML='Send reminder on <b>'+v[0]+', '+v[1]+':'+v[2]+' '+v[3]+'</b>';}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- @dsCard group="Expressive" height=150 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Keycaps — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col"><div class="m-row"><span class="x-keys" aria-label="Command K"><span class="x-key" id="k1">⌘</span><span class="plus">+</span><span class="x-key" id="k2">K</span></span><span class="m-help">Open the command palette. Try pressing it.</span></div>
+<div class="m-row"><span class="x-keys"><span class="x-key">G</span><span class="plus">then</span><span class="x-key">I</span></span><span class="m-help">Go to invoices</span><span class="x-keys" style="margin-left:24px"><span class="x-key" style="min-width:64px">Esc</span></span><span class="m-help">Stop agent</span></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function down(id,on){var k=document.getElementById(id);if(k)k.classList.toggle('is-down',on);}
+addEventListener('keydown',function(e){if(e.metaKey||e.ctrlKey||e.key==='Meta')down('k1',true);if(e.key.toLowerCase()==='k')down('k2',true);});
+addEventListener('keyup',function(){down('k1',false);down('k2',false);});
+if(!RM){setInterval(function(){down('k1',true);setTimeout(function(){down('k2',true);},180);setTimeout(function(){down('k1',false);down('k2',false);},700);},2600);}
+
+</script>
+</body>
+</html>

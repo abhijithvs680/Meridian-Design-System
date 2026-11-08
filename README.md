@@ -8,6 +8,17 @@ Calm, dense, and honest about what the agent did.
 
 Maintained by Abhijith.
 
+## Use Meridian in a coding agent
+
+Extract the Meridian skill ZIP and copy the whole `meridian-design-system` folder to your agent's skills directory. Use one of these project locations to share it with a team.
+
+| Agent | Project directory | Personal directory | Invoke |
+| --- | --- | --- | --- |
+| [Codex](https://learn.chatgpt.com/docs/build-skills) | `.agents/skills/` | `~/.agents/skills/` | `$meridian-design-system` |
+| [Claude Code](https://code.claude.com/docs/en/skills) | `.claude/skills/` | `~/.claude/skills/` | `/meridian-design-system` |
+
+For another Agent Skills client, use its skill discovery directory. For example, ask the agent to “Use Meridian to add a compact invoice assistant with inline run status.” The skill contains the design rules and the source needed to work offline. Rebuild it from this repo with `npm run build` followed by `npm run package:skill`. The expanded skill and ZIP are written to `releases/`.
+
 ## New in 2.11.1
 
 AIComposer, CommandComposer, and ContextComposer start on one line. Research, Brief, and Canvas have room for longer instructions. Agent activity uses inline labels and progress indicators with slate identity tokens.

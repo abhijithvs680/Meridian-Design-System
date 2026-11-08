@@ -1,0 +1,1685 @@
+{
+  "version": "2.11.1",
+  "components": [
+    {
+      "name": "Accordion",
+      "group": "Layout",
+      "summary": "Accordion, expandable card and expandable text for progressive disclosure.",
+      "path": "components/Accordion/preview.html",
+      "added": false
+    },
+    {
+      "name": "ActionReview",
+      "group": "Agent operations",
+      "summary": "Concrete before-and-after review with exact target, scope and a one-time decision.",
+      "path": "components/ActionReview/preview.html",
+      "added": true
+    },
+    {
+      "name": "AgentControlCenter",
+      "group": "Agent operations",
+      "summary": "A run surface with visible scope, steps, pause/resume and cancellation.",
+      "path": "components/AgentControlCenter/preview.html",
+      "added": true
+    },
+    {
+      "name": "AgentCursor",
+      "group": "Expressive",
+      "summary": "A labelled cursor that shows an agent working inside the UI: moving between fields and typing, while the user watches.",
+      "path": "components/AgentCursor/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentHandoff",
+      "group": "Agent",
+      "summary": "Shows work passing between agents, or from an agent to a person.",
+      "path": "components/AgentHandoff/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentLoop",
+      "group": "Expressive",
+      "summary": "Animated plan → act → observe → reflect cycle showing which phase an agent is in.",
+      "path": "components/AgentLoop/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentMessage",
+      "group": "Agent",
+      "summary": "One turn in a conversation with an agent, plus the composer, in the docked agent panel or a full chat page.",
+      "path": "components/AgentMessage/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentOrb",
+      "group": "Expressive",
+      "summary": "Meri, Meridian's agent character: an original slate orb crossed by the meridian arc, with eyes that show state.",
+      "path": "components/AgentOrb/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentPlan",
+      "group": "Agent",
+      "summary": "The steps an agent intends to take, shown before (and while) it executes, editable by the user.",
+      "path": "components/AgentPlan/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentRunSteps",
+      "group": "Agent",
+      "summary": "Shows what an agent is doing, step by step, so users can trust and interrupt it.",
+      "path": "components/AgentRunSteps/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentStatus",
+      "group": "Agent",
+      "summary": "An inline activity label for a panel header, record or run list. Use a short action such as “Reviewing invoices” when the active operation is known. Use a small progress meter and a visible step count when the total is known.",
+      "path": "components/AgentStatus/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentTerminal",
+      "group": "Expressive",
+      "summary": "A streaming, terminal-style log of an agent run, for technical users who want to watch the raw steps.",
+      "path": "components/AgentTerminal/preview.html",
+      "added": false
+    },
+    {
+      "name": "AgentTimeline",
+      "group": "Agent",
+      "summary": "Timestamped audit events across agents, tools, approvals, and handoffs.",
+      "path": "components/AgentTimeline/preview.html",
+      "added": false
+    },
+    {
+      "name": "AICommand",
+      "group": "Agent",
+      "summary": "Keyboard-first actions and cited natural-language answers.",
+      "path": "components/AICommand/preview.html",
+      "added": false
+    },
+    {
+      "name": "AIComposer",
+      "group": "Agent",
+      "summary": "Ask about the current record. Starts on one line and grows as the draft wraps.",
+      "path": "components/AIComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "AIEditReview",
+      "group": "Agent",
+      "summary": "Per-change review of proposed text or code edits.",
+      "path": "components/AIEditReview/preview.html",
+      "added": false
+    },
+    {
+      "name": "AIWorkflow",
+      "group": "Agent",
+      "summary": "Node-and-edge view of an automated workflow: triggers, agents, tools, human steps.",
+      "path": "components/AIWorkflow/preview.html",
+      "added": false
+    },
+    {
+      "name": "Alert",
+      "group": "Feedback",
+      "summary": "An inline banner for page- or section-level status that persists until resolved.",
+      "path": "components/Alert/preview.html",
+      "added": false
+    },
+    {
+      "name": "ApprovalCard",
+      "group": "Agent",
+      "summary": "Human-in-the-loop gate before an agent changes data, spends money or contacts anyone.",
+      "path": "components/ApprovalCard/preview.html",
+      "added": false
+    },
+    {
+      "name": "ArtifactReview",
+      "group": "Agent operations",
+      "summary": "Generated artifact handoff keeps version, source and review state visible.",
+      "path": "components/ArtifactReview/preview.html",
+      "added": true
+    },
+    {
+      "name": "AuditExplorer",
+      "group": "Business",
+      "summary": "Chronological audit events distinguish human, agent and system actors.",
+      "path": "components/AuditExplorer/preview.html",
+      "added": true
+    },
+    {
+      "name": "Avatar",
+      "group": "Data display",
+      "summary": "A person's initials (or photo) in a circle. Agents use AgentAvatar instead.",
+      "path": "components/Avatar/preview.html",
+      "added": false
+    },
+    {
+      "name": "Badge",
+      "group": "Data display",
+      "summary": "One to three words of status for a record; the tone carries meaning, never decoration.",
+      "path": "components/Badge/preview.html",
+      "added": false
+    },
+    {
+      "name": "Banner",
+      "group": "Feedback",
+      "summary": "Full-width announcement, agent-activity and trial banners, plus the cookie consent panel.",
+      "path": "components/Banner/preview.html",
+      "added": false
+    },
+    {
+      "name": "BarChart",
+      "group": "Data display",
+      "summary": "Charts live in a Card and draw series with `chart-1…6` in order. This preview shows a stacked bar; the rules cover all chart types.",
+      "path": "components/BarChart/preview.html",
+      "added": false
+    },
+    {
+      "name": "BlueprintHero",
+      "title": "Blueprint hero",
+      "group": "Marketing · Heroes",
+      "family": "Heroes",
+      "order": 11,
+      "summary": "Centered product positioning over a technical drafting illustration.",
+      "path": "components/BlueprintHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "BriefComposer",
+      "group": "Agent",
+      "summary": "Write a brief. Starts with 3 rows for tasks that need a longer prompt.",
+      "path": "components/BriefComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "Button",
+      "group": "Actions",
+      "summary": "Triggers an action. Secondary is the default; **primary** appears at most once per view.",
+      "path": "components/Button/preview.html",
+      "added": false
+    },
+    {
+      "name": "ButtonGroup",
+      "group": "Actions",
+      "summary": "Button group, split button, copy button and hold-to-confirm: compound buttons built from Button.",
+      "path": "components/ButtonGroup/preview.html",
+      "added": false
+    },
+    {
+      "name": "CanvasComposer",
+      "group": "Agent",
+      "summary": "Start a new draft. Starts with 5 rows for tasks that need a longer prompt.",
+      "path": "components/CanvasComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "Card",
+      "group": "Layout",
+      "summary": "The container for one unit of content on a page: a chart, a list, a form section.",
+      "path": "components/Card/preview.html",
+      "added": false
+    },
+    {
+      "name": "CardStack",
+      "group": "Expressive",
+      "summary": "A stack of record cards reviewed one at a time: swipe or press → to move on.",
+      "path": "components/CardStack/preview.html",
+      "added": false
+    },
+    {
+      "name": "ChatThread",
+      "group": "Agent",
+      "summary": "Grouped conversation turns with attachments and citations.",
+      "path": "components/ChatThread/preview.html",
+      "added": false
+    },
+    {
+      "name": "Checkbox",
+      "group": "Forms",
+      "summary": "Checkbox, Radio and Switch: the three choice controls, sharing one style.",
+      "path": "components/Checkbox/preview.html",
+      "added": false
+    },
+    {
+      "name": "CodeBlock",
+      "group": "Data display",
+      "summary": "Code block, JSON viewer and code suggestion (diff with accept/reject).",
+      "path": "components/CodeBlock/preview.html",
+      "added": false
+    },
+    {
+      "name": "Combobox",
+      "group": "Forms",
+      "summary": "Searchable select (combobox) and multi-select, for long or dynamic option lists.",
+      "path": "components/Combobox/preview.html",
+      "added": false
+    },
+    {
+      "name": "CommandComposer",
+      "group": "Agent",
+      "summary": "Run a quick command. Starts on one line and grows as the draft wraps.",
+      "path": "components/CommandComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "CommandPalette",
+      "group": "Navigation",
+      "summary": "Keyboard-first launcher for navigation, actions and agent questions (⌘K). Also the home of the \"AI command\" pattern.",
+      "path": "components/CommandPalette/preview.html",
+      "added": false
+    },
+    {
+      "name": "ConnectorSetup",
+      "group": "Agent",
+      "summary": "Connecting a data source or tool for agents: scopes, credentials and a test.",
+      "path": "components/ConnectorSetup/preview.html",
+      "added": false
+    },
+    {
+      "name": "ConsultationDialog",
+      "title": "Consultation dialog",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 15,
+      "summary": "A focused modal lead form with keyboard-safe dismissal.",
+      "path": "components/ConsultationDialog/preview.html",
+      "added": true
+    },
+    {
+      "name": "ContextComposer",
+      "group": "Agent",
+      "summary": "Reply in a thread. Starts on one line and grows as the draft wraps.",
+      "path": "components/ContextComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "ContextWindow",
+      "group": "Agent",
+      "summary": "How much of the model's context an agent session is using, by category; includes prompt cache stats.",
+      "path": "components/ContextWindow/preview.html",
+      "added": false
+    },
+    {
+      "name": "ContourParallax",
+      "title": "Contour parallax",
+      "group": "Marketing · Scroll effects",
+      "family": "Scroll effects",
+      "order": 24,
+      "summary": "A topographic plate with native viewport-linked drift.",
+      "path": "components/ContourParallax/preview.html",
+      "added": true
+    },
+    {
+      "name": "ConversionPanel",
+      "group": "Marketing",
+      "summary": "A focused closing call to action with supporting trust copy.",
+      "path": "components/ConversionPanel/preview.html",
+      "added": true
+    },
+    {
+      "name": "Cover",
+      "group": "Showcase",
+      "summary": "Meridian visual composition.",
+      "path": "components/Cover/preview.html",
+      "added": false
+    },
+    {
+      "name": "DashboardShowcase",
+      "group": "Showcase",
+      "summary": "A full agent-driven dashboard composed only from Meridian components, following the Dashboard page pattern: app shell, PageHeader, KPI row, insight and approval, then a \"Needs attention\" table. Resize to see the sidebar collapse to a rail (under 1024px) and hide (under 768px).",
+      "path": "components/DashboardShowcase/preview.html",
+      "added": false
+    },
+    {
+      "name": "DataFlow",
+      "group": "Expressive",
+      "summary": "A live system diagram: data moving between sources, warehouse, agents and destinations, with health on each node.",
+      "path": "components/DataFlow/preview.html",
+      "added": false
+    },
+    {
+      "name": "DataGrid",
+      "group": "Data display",
+      "summary": "Editable, spreadsheet-like grid with cell focus, inline editing and conditional formatting.",
+      "path": "components/DataGrid/preview.html",
+      "added": false
+    },
+    {
+      "name": "DataTable",
+      "group": "Data display",
+      "summary": "Search, filter, sort, select and act on records. The workhorse of business apps.",
+      "path": "components/DataTable/preview.html",
+      "added": false
+    },
+    {
+      "name": "DatePicker",
+      "group": "Forms",
+      "summary": "Calendar, date picker, date range picker with presets, time picker and color picker.",
+      "path": "components/DatePicker/preview.html",
+      "added": false
+    },
+    {
+      "name": "DateReel",
+      "group": "Expressive",
+      "summary": "A wheel-style date and time picker with snap scrolling, for touch-first scheduling.",
+      "path": "components/DateReel/preview.html",
+      "added": false
+    },
+    {
+      "name": "Dialog",
+      "group": "Overlays",
+      "summary": "A modal that interrupts for a decision or a short task. Drawers (right side, 480px) use the same anatomy for longer forms.",
+      "path": "components/Dialog/preview.html",
+      "added": false
+    },
+    {
+      "name": "Dock",
+      "group": "Expressive",
+      "summary": "A floating launcher whose icons magnify toward the pointer, for apps with a handful of top-level areas.",
+      "path": "components/Dock/preview.html",
+      "added": false
+    },
+    {
+      "name": "DonutChart",
+      "group": "Charts",
+      "summary": "Donut (part of whole, ≤4 parts), gauge (one value against a target) and waffle charts.",
+      "path": "components/DonutChart/preview.html",
+      "added": false
+    },
+    {
+      "name": "DownloadGate",
+      "title": "Download handoff",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 13,
+      "summary": "A direct download with clear file format and no lead capture.",
+      "path": "components/DownloadGate/preview.html",
+      "added": true
+    },
+    {
+      "name": "Drawer",
+      "group": "Overlays",
+      "summary": "Side drawer for forms and detail previews; becomes a bottom sheet on phones.",
+      "path": "components/Drawer/preview.html",
+      "added": false
+    },
+    {
+      "name": "EditorialAction",
+      "title": "Editorial action",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 12,
+      "summary": "A high contrast closing section with two explicit routes.",
+      "path": "components/EditorialAction/preview.html",
+      "added": true
+    },
+    {
+      "name": "EditorialHeader",
+      "title": "Editorial header",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 0,
+      "summary": "An understated editorial header with a native flyout.",
+      "path": "components/EditorialHeader/preview.html",
+      "added": true
+    },
+    {
+      "name": "EmptyState",
+      "group": "Feedback",
+      "summary": "What a list, table or dashboard shows before it has data: an invitation, not an apology.",
+      "path": "components/EmptyState/preview.html",
+      "added": false
+    },
+    {
+      "name": "EnrichColumn",
+      "group": "Agent",
+      "summary": "An agent fills a new column for every row (enrichment, classification, smart form fill).",
+      "path": "components/EnrichColumn/preview.html",
+      "added": false
+    },
+    {
+      "name": "EvaluationScorecard",
+      "group": "Agent operations",
+      "summary": "Evaluation scorecard separates quality, reliability and budget regression.",
+      "path": "components/EvaluationScorecard/preview.html",
+      "added": true
+    },
+    {
+      "name": "EvidencePanel",
+      "group": "Agent operations",
+      "summary": "Source provenance, quoted excerpts and explicit limits on generated findings.",
+      "path": "components/EvidencePanel/preview.html",
+      "added": true
+    },
+    {
+      "name": "FieldworkEditorialHero",
+      "title": "Fieldwork editorial hero",
+      "group": "Marketing · Heroes",
+      "family": "Heroes",
+      "order": 8,
+      "summary": "Large serif typography, generous space and an original topographic plate.",
+      "path": "components/FieldworkEditorialHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "FileDropzone",
+      "group": "Forms",
+      "summary": "Drag-and-drop upload area with a file list showing progress and results. Avatar upload is the same pattern in a 64px circle.",
+      "path": "components/FileDropzone/preview.html",
+      "added": false
+    },
+    {
+      "name": "FilterChips",
+      "group": "Forms",
+      "summary": "Chip group (multi-select toggles) and Rating.",
+      "path": "components/FilterChips/preview.html",
+      "added": false
+    },
+    {
+      "name": "FilterToolbar",
+      "group": "Data display",
+      "summary": "Filter toolbar (applied filters as removable chips) and reorderable list.",
+      "path": "components/FilterToolbar/preview.html",
+      "added": false
+    },
+    {
+      "name": "FrostedPanel",
+      "group": "Expressive",
+      "summary": "A translucent, blurred layer that floats over live content, keeping context visible behind it.",
+      "path": "components/FrostedPanel/preview.html",
+      "added": false
+    },
+    {
+      "name": "FullscreenIndex",
+      "title": "Fullscreen index",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 3,
+      "summary": "A large format index with a modal reading order.",
+      "path": "components/FullscreenIndex/preview.html",
+      "added": true
+    },
+    {
+      "name": "FunnelChart",
+      "group": "Charts",
+      "summary": "Funnel for stage conversion. Sankey, radar and streamgraph follow the same card and token rules.",
+      "path": "components/FunnelChart/preview.html",
+      "added": false
+    },
+    {
+      "name": "GenerationReveal",
+      "group": "Expressive",
+      "summary": "Agent-generated content (charts, images, documents) resolving from a field of tiles as it finishes.",
+      "path": "components/GenerationReveal/preview.html",
+      "added": false
+    },
+    {
+      "name": "Heatmap",
+      "group": "Charts",
+      "summary": "Activity heatmap (calendar grid) and treemap for density and hierarchy.",
+      "path": "components/Heatmap/preview.html",
+      "added": false
+    },
+    {
+      "name": "IllustratedColophon",
+      "title": "Illustrated colophon",
+      "group": "Marketing · Footers",
+      "family": "Footers",
+      "order": 20,
+      "summary": "An illustrated footer with a warm clay terrace plate.",
+      "path": "components/IllustratedColophon/preview.html",
+      "added": true
+    },
+    {
+      "name": "ImageCompare",
+      "group": "Expressive",
+      "summary": "Before/after slider, for comparing an original with what an agent produced.",
+      "path": "components/ImageCompare/preview.html",
+      "added": false
+    },
+    {
+      "name": "ImageGeneration",
+      "group": "Agent",
+      "summary": "Prompt and variation workspace for generated images.",
+      "path": "components/ImageGeneration/preview.html",
+      "added": false
+    },
+    {
+      "name": "InlineEdit",
+      "group": "Forms",
+      "summary": "Click-to-edit text for titles and single fields on detail pages.",
+      "path": "components/InlineEdit/preview.html",
+      "added": false
+    },
+    {
+      "name": "InsightCard",
+      "group": "Agent",
+      "summary": "An agent-generated finding on a dashboard: a headline, the evidence, and how sure it is.",
+      "path": "components/InsightCard/preview.html",
+      "added": false
+    },
+    {
+      "name": "IntegrationCatalog",
+      "group": "Business",
+      "summary": "Connector cards expose availability, scopes and sync state.",
+      "path": "components/IntegrationCatalog/preview.html",
+      "added": true
+    },
+    {
+      "name": "InvoiceWorkbench",
+      "group": "Business",
+      "summary": "Searchable invoice table with status filtering, amount sorting and CSV export.",
+      "path": "components/InvoiceWorkbench/preview.html",
+      "added": true
+    },
+    {
+      "name": "Keycaps",
+      "group": "Expressive",
+      "summary": "Tactile keyboard keys for teaching shortcuts, with a pressed state that reacts to the real keyboard.",
+      "path": "components/Keycaps/preview.html",
+      "added": false
+    },
+    {
+      "name": "LaunchMegamenu",
+      "title": "Launch megamenu",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 1,
+      "summary": "Two grouped link columns and a release announcement.",
+      "path": "components/LaunchMegamenu/preview.html",
+      "added": true
+    },
+    {
+      "name": "LineChart",
+      "group": "Charts",
+      "summary": "Line and area charts for trends over time; brush chart adds a range selector under the main plot.",
+      "path": "components/LineChart/preview.html",
+      "added": false
+    },
+    {
+      "name": "LivePill",
+      "group": "Expressive",
+      "summary": "A compact, always-visible island that grows to show what an agent is doing in the background, then shrinks back.",
+      "path": "components/LivePill/preview.html",
+      "added": false
+    },
+    {
+      "name": "LLMCostEstimator",
+      "group": "Agent",
+      "summary": "Workload-based model spend estimates with dated pricing assumptions.",
+      "path": "components/LLMCostEstimator/preview.html",
+      "added": false
+    },
+    {
+      "name": "LocaleShowcase",
+      "group": "Showcase",
+      "summary": "The same invoice header, KPI and table row in five markets, showing that Meridian components adapt to language, script, direction and number formats without any component changes.",
+      "path": "components/LocaleShowcase/preview.html",
+      "added": false
+    },
+    {
+      "name": "MeetingSummary",
+      "group": "Agent",
+      "summary": "Source-linked meeting notes with decisions and follow-up actions.",
+      "path": "components/MeetingSummary/preview.html",
+      "added": false
+    },
+    {
+      "name": "MegaNavigation",
+      "group": "Marketing",
+      "summary": "Responsive product navigation with a native disclosure and a categorized flyout.",
+      "path": "components/MegaNavigation/preview.html",
+      "added": true
+    },
+    {
+      "name": "Menu",
+      "group": "Actions",
+      "summary": "A list of actions that opens from a button, usually the \"⋯\" row or page overflow.",
+      "path": "components/Menu/preview.html",
+      "added": false
+    },
+    {
+      "name": "ModelCard",
+      "group": "Agent",
+      "summary": "A model's identity, capabilities and live stats; covers provider status, generation stats and provider keys.",
+      "path": "components/ModelCard/preview.html",
+      "added": false
+    },
+    {
+      "name": "ModelRouting",
+      "group": "Agent operations",
+      "summary": "Task-oriented model routing makes cost and fallback policies inspectable.",
+      "path": "components/ModelRouting/preview.html",
+      "added": true
+    },
+    {
+      "name": "MorphButton",
+      "group": "Expressive",
+      "summary": "A button that shows its own result: idle → working → done, or a two-step inline confirm for small destructive actions.",
+      "path": "components/MorphButton/preview.html",
+      "added": false
+    },
+    {
+      "name": "NewsletterEdition",
+      "title": "Newsletter edition",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 14,
+      "summary": "A publication signup with native validation and visible feedback.",
+      "path": "components/NewsletterEdition/preview.html",
+      "added": true
+    },
+    {
+      "name": "NotificationInbox",
+      "group": "Business",
+      "summary": "Action-oriented notification inbox links directly to the relevant review surface.",
+      "path": "components/NotificationInbox/preview.html",
+      "added": true
+    },
+    {
+      "name": "NumberInput",
+      "group": "Forms",
+      "summary": "Number, money, phone and percent inputs: one input group with prefixes, suffixes and steppers.",
+      "path": "components/NumberInput/preview.html",
+      "added": false
+    },
+    {
+      "name": "OrbitalProductHero",
+      "title": "Orbital product hero",
+      "group": "Marketing · Heroes",
+      "family": "Heroes",
+      "order": 7,
+      "summary": "A cinematic blue-black hero with original orbital linework and a clear product action.",
+      "path": "components/OrbitalProductHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "PageHeader",
+      "group": "Layout",
+      "summary": "The top of every page: where you are, what this is, what you can do.",
+      "path": "components/PageHeader/preview.html",
+      "added": false
+    },
+    {
+      "name": "PasswordField",
+      "group": "Forms",
+      "summary": "Password input with show/hide and a strength meter.",
+      "path": "components/PasswordField/preview.html",
+      "added": false
+    },
+    {
+      "name": "PathwayFooter",
+      "title": "Pathway footer",
+      "group": "Marketing · Footers",
+      "family": "Footers",
+      "order": 21,
+      "summary": "Three clearly framed destinations for readers who reach the end of a page.",
+      "path": "components/PathwayFooter/preview.html",
+      "added": true
+    },
+    {
+      "name": "PermissionMatrix",
+      "group": "Business",
+      "summary": "Readable role-permission matrix for administration and security reviews.",
+      "path": "components/PermissionMatrix/preview.html",
+      "added": true
+    },
+    {
+      "name": "PiiRedaction",
+      "group": "Agent",
+      "summary": "Shows which personal data was masked before text reached a model.",
+      "path": "components/PiiRedaction/preview.html",
+      "added": false
+    },
+    {
+      "name": "PinnedChapters",
+      "title": "Pinned chapters",
+      "group": "Marketing · Scroll effects",
+      "family": "Scroll effects",
+      "order": 23,
+      "summary": "A sticky chapter heading beside a naturally scrolling narrative.",
+      "path": "components/PinnedChapters/preview.html",
+      "added": true
+    },
+    {
+      "name": "PipelineBoard",
+      "group": "Business",
+      "summary": "Keyboard-operable task board with explicit move controls.",
+      "path": "components/PipelineBoard/preview.html",
+      "added": true
+    },
+    {
+      "name": "PlanDecisionCTA",
+      "title": "Plan decision",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 16,
+      "summary": "Plan selection with monthly and annual price examples.",
+      "path": "components/PlanDecisionCTA/preview.html",
+      "added": true
+    },
+    {
+      "name": "Popover",
+      "group": "Overlays",
+      "summary": "Popover, hover card and confirm popover: small floating panels anchored to a trigger.",
+      "path": "components/Popover/preview.html",
+      "added": false
+    },
+    {
+      "name": "PricingComparison",
+      "group": "Marketing",
+      "summary": "Three-tier pricing with a functioning billing-period switch.",
+      "path": "components/PricingComparison/preview.html",
+      "added": true
+    },
+    {
+      "name": "ProductHero",
+      "group": "Marketing",
+      "summary": "Split editorial hero with an original orbital illustration and clear navigation.",
+      "path": "components/ProductHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "ProductProofCTA",
+      "title": "Product proof action",
+      "group": "Marketing · Calls to action",
+      "family": "Calls to action",
+      "order": 17,
+      "summary": "A conversion section with the actual review interface alongside it.",
+      "path": "components/ProductProofCTA/preview.html",
+      "added": true
+    },
+    {
+      "name": "ProductProofHero",
+      "title": "Product proof hero",
+      "group": "Marketing · Heroes",
+      "family": "Heroes",
+      "order": 9,
+      "summary": "A split hero that demonstrates a real review state in the headline area.",
+      "path": "components/ProductProofHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "ProductSubnav",
+      "title": "Product subnavigation",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 6,
+      "summary": "Breadcrumbs and secondary navigation for a product family.",
+      "path": "components/ProductSubnav/preview.html",
+      "added": true
+    },
+    {
+      "name": "Progress",
+      "group": "Feedback",
+      "summary": "Progress bars for measurable work, skeletons for loading content, spinners only inside buttons.",
+      "path": "components/Progress/preview.html",
+      "added": false
+    },
+    {
+      "name": "ProgressivePanels",
+      "title": "Progressive panels",
+      "group": "Marketing · Scroll effects",
+      "family": "Scroll effects",
+      "order": 26,
+      "summary": "Editorial feature panels with a restrained entrance effect.",
+      "path": "components/ProgressivePanels/preview.html",
+      "added": true
+    },
+    {
+      "name": "ProgressRings",
+      "group": "Expressive",
+      "summary": "Concentric goal rings: two to three related goals at a glance.",
+      "path": "components/ProgressRings/preview.html",
+      "added": false
+    },
+    {
+      "name": "QuietFooter",
+      "title": "Quiet footer",
+      "group": "Marketing · Footers",
+      "family": "Footers",
+      "order": 22,
+      "summary": "A slim sign-off for documentation and product tools.",
+      "path": "components/QuietFooter/preview.html",
+      "added": true
+    },
+    {
+      "name": "RadialMenu",
+      "group": "Expressive",
+      "summary": "Quick actions that fan out in a circle around a floating button.",
+      "path": "components/RadialMenu/preview.html",
+      "added": false
+    },
+    {
+      "name": "RadioCards",
+      "group": "Forms",
+      "summary": "Radio options presented as cards, for choices that need a description.",
+      "path": "components/RadioCards/preview.html",
+      "added": false
+    },
+    {
+      "name": "ReasoningBlock",
+      "group": "Agent",
+      "summary": "Collapsible summary of how the agent reached its answer.",
+      "path": "components/ReasoningBlock/preview.html",
+      "added": false
+    },
+    {
+      "name": "ReplyDraft",
+      "group": "Agent",
+      "summary": "Agent-drafted text the user edits before using; covers ghost-text completion, tone, translate and TL;DR toggles.",
+      "path": "components/ReplyDraft/preview.html",
+      "added": false
+    },
+    {
+      "name": "ResearchComposer",
+      "group": "Agent",
+      "summary": "Research a question. Starts with 3 rows for tasks that need a longer prompt.",
+      "path": "components/ResearchComposer/preview.html",
+      "added": false
+    },
+    {
+      "name": "ResizablePanels",
+      "group": "Layout",
+      "summary": "Split view with a draggable divider; Scroll area for contained scrolling.",
+      "path": "components/ResizablePanels/preview.html",
+      "added": false
+    },
+    {
+      "name": "ResourceFooter",
+      "group": "Marketing",
+      "summary": "Multi-column resource footer with identity, documentation and product links.",
+      "path": "components/ResourceFooter/preview.html",
+      "added": true
+    },
+    {
+      "name": "ResourceMatrixFooter",
+      "title": "Resource matrix footer",
+      "group": "Marketing · Footers",
+      "family": "Footers",
+      "order": 19,
+      "summary": "A compact footer grid for products with extensive documentation.",
+      "path": "components/ResourceMatrixFooter/preview.html",
+      "added": true
+    },
+    {
+      "name": "ResourceRail",
+      "title": "Resource rail",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 4,
+      "summary": "A narrow sidebar index with breadcrumbs for structured documentation.",
+      "path": "components/ResourceRail/preview.html",
+      "added": true
+    },
+    {
+      "name": "ResourceSearchNav",
+      "title": "Resource search navigation",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 5,
+      "summary": "A searchable resource index inside a navigation disclosure.",
+      "path": "components/ResourceSearchNav/preview.html",
+      "added": true
+    },
+    {
+      "name": "ResponseFeedback",
+      "group": "Agent",
+      "summary": "Feedback and utility actions under an agent answer, with generation stats.",
+      "path": "components/ResponseFeedback/preview.html",
+      "added": false
+    },
+    {
+      "name": "RichTextEditor",
+      "group": "Forms",
+      "summary": "Rich text editor with a formatting toolbar and agent writing actions, plus a signature pad.",
+      "path": "components/RichTextEditor/preview.html",
+      "added": false
+    },
+    {
+      "name": "RollingNumber",
+      "group": "Expressive",
+      "summary": "A number whose digits roll like an odometer when it changes.",
+      "path": "components/RollingNumber/preview.html",
+      "added": false
+    },
+    {
+      "name": "RunBudget",
+      "group": "Agent operations",
+      "summary": "Explicit cost, tool-call and time limits for agent runs.",
+      "path": "components/RunBudget/preview.html",
+      "added": true
+    },
+    {
+      "name": "SearchField",
+      "group": "Forms",
+      "summary": "Search input with icon, shortcut hint and clear button. Expanding search collapses to an icon button in tight toolbars.",
+      "path": "components/SearchField/preview.html",
+      "added": false
+    },
+    {
+      "name": "SegmentedControl",
+      "group": "Forms",
+      "summary": "A compact single-choice switch for 2–5 options that change a view immediately.",
+      "path": "components/SegmentedControl/preview.html",
+      "added": false
+    },
+    {
+      "name": "Select",
+      "group": "Forms",
+      "summary": "Choose one value from a list of 3–15 options.",
+      "path": "components/Select/preview.html",
+      "added": false
+    },
+    {
+      "name": "ShareAccess",
+      "group": "Overlays",
+      "summary": "Sharing panel: invite people, set roles, see who (and which agents) have access.",
+      "path": "components/ShareAccess/preview.html",
+      "added": false
+    },
+    {
+      "name": "Sidebar",
+      "group": "Navigation",
+      "summary": "The app's primary navigation, fixed on the left.",
+      "path": "components/Sidebar/preview.html",
+      "added": false
+    },
+    {
+      "name": "Slider",
+      "group": "Forms",
+      "summary": "Slider for one value, and a range slider with a histogram showing how data is distributed.",
+      "path": "components/Slider/preview.html",
+      "added": false
+    },
+    {
+      "name": "SlidingTabs",
+      "group": "Expressive",
+      "summary": "Segmented control and tabs whose selection indicator glides to the chosen item.",
+      "path": "components/SlidingTabs/preview.html",
+      "added": false
+    },
+    {
+      "name": "SnapPlateGallery",
+      "title": "Snap plate gallery",
+      "group": "Marketing · Scroll effects",
+      "family": "Scroll effects",
+      "order": 25,
+      "summary": "A manual horizontal gallery with snap points and explicit controls.",
+      "path": "components/SnapPlateGallery/preview.html",
+      "added": true
+    },
+    {
+      "name": "SourceCards",
+      "group": "Agent",
+      "summary": "The sources behind an agent answer as numbered cards, matching the inline citation chips.",
+      "path": "components/SourceCards/preview.html",
+      "added": false
+    },
+    {
+      "name": "Sparkline",
+      "group": "Charts",
+      "summary": "Sparkline (tiny trend, no axes), split bar and animated counter, for use inside StatCards and table cells.",
+      "path": "components/Sparkline/preview.html",
+      "added": false
+    },
+    {
+      "name": "SpotlightCard",
+      "group": "Expressive",
+      "summary": "Interactive card with a soft light that follows the pointer along its border.",
+      "path": "components/SpotlightCard/preview.html",
+      "added": false
+    },
+    {
+      "name": "StarterPrompts",
+      "group": "Agent",
+      "summary": "Starter prompts and the \"ask your data\" entry point: an input plus suggested questions grounded in the user's data.",
+      "path": "components/StarterPrompts/preview.html",
+      "added": false
+    },
+    {
+      "name": "StatCard",
+      "group": "Data display",
+      "summary": "A single KPI: label, value, and what changed against a stated period.",
+      "path": "components/StatCard/preview.html",
+      "added": false
+    },
+    {
+      "name": "Stepper",
+      "group": "Feedback",
+      "summary": "Horizontal steps for multi-step flows (wizards, onboarding, imports).",
+      "path": "components/Stepper/preview.html",
+      "added": false
+    },
+    {
+      "name": "StickyProductNav",
+      "title": "Sticky product navigation",
+      "group": "Marketing · Navigation",
+      "family": "Navigation",
+      "order": 2,
+      "summary": "A persistent product header with reading progress.",
+      "path": "components/StickyProductNav/preview.html",
+      "added": true
+    },
+    {
+      "name": "SubscriptionUsage",
+      "group": "Business",
+      "summary": "Quota and subscription usage with units, reset date and accessible meters.",
+      "path": "components/SubscriptionUsage/preview.html",
+      "added": true
+    },
+    {
+      "name": "SuccessMoment",
+      "group": "Expressive",
+      "summary": "A brief, restrained celebration for meaningful completions: a check that draws itself, two ripples and a ring of sparks.",
+      "path": "components/SuccessMoment/preview.html",
+      "added": false
+    },
+    {
+      "name": "TableOfContents",
+      "group": "Navigation",
+      "summary": "On-page navigation for long reports and docs, highlighting the section in view.",
+      "path": "components/TableOfContents/preview.html",
+      "added": false
+    },
+    {
+      "name": "Tabs",
+      "group": "Navigation",
+      "summary": "Switch between views of ONE record or dataset, under the PageHeader.",
+      "path": "components/Tabs/preview.html",
+      "added": false
+    },
+    {
+      "name": "TagInput",
+      "group": "Forms",
+      "summary": "Tag input (multiple values as chips) and mention input (@people, @agents, #records inside text).",
+      "path": "components/TagInput/preview.html",
+      "added": false
+    },
+    {
+      "name": "TeamSwitcher",
+      "group": "Expressive",
+      "summary": "Workspace / team / client switcher for the top of the sidebar.",
+      "path": "components/TeamSwitcher/preview.html",
+      "added": false
+    },
+    {
+      "name": "TextField",
+      "group": "Forms",
+      "summary": "A labelled single-line input or multi-line textarea, with helper or error text.",
+      "path": "components/TextField/preview.html",
+      "added": false
+    },
+    {
+      "name": "TextReveal",
+      "group": "Expressive",
+      "summary": "Streaming agent text where each word settles in from a soft blur, so streaming feels calm instead of jittery.",
+      "path": "components/TextReveal/preview.html",
+      "added": false
+    },
+    {
+      "name": "ThemeSwitcher",
+      "group": "Actions",
+      "summary": "Light / System / Dark switch, a Segmented control bound to `data-theme`.",
+      "path": "components/ThemeSwitcher/preview.html",
+      "added": false
+    },
+    {
+      "name": "Timeline",
+      "group": "Data display",
+      "summary": "Activity timeline and comment thread, the audit trail of people and agents on a record.",
+      "path": "components/Timeline/preview.html",
+      "added": false
+    },
+    {
+      "name": "Toast",
+      "group": "Overlays",
+      "summary": "Brief confirmation of something the user just did, bottom-right, auto-dismissing.",
+      "path": "components/Toast/preview.html",
+      "added": false
+    },
+    {
+      "name": "ToolCall",
+      "group": "Agent",
+      "summary": "One tool call an agent made: what it did in plain words, the tool, arguments, result and timing.",
+      "path": "components/ToolCall/preview.html",
+      "added": false
+    },
+    {
+      "name": "Tooltip",
+      "group": "Overlays",
+      "summary": "A short label that appears on hover or focus, mainly for icon-only buttons and truncated text.",
+      "path": "components/Tooltip/preview.html",
+      "added": false
+    },
+    {
+      "name": "TrainingRun",
+      "group": "Agent",
+      "summary": "Training-job progress, metrics, checkpoints, and controls.",
+      "path": "components/TrainingRun/preview.html",
+      "added": false
+    },
+    {
+      "name": "TreeView",
+      "group": "Data display",
+      "summary": "Tree view and tree table for hierarchical data.",
+      "path": "components/TreeView/preview.html",
+      "added": false
+    },
+    {
+      "name": "TypeFirstHero",
+      "title": "Type-first hero",
+      "group": "Marketing · Heroes",
+      "family": "Heroes",
+      "order": 10,
+      "summary": "A masthead-sized wordmark and one action on a rust color field.",
+      "path": "components/TypeFirstHero/preview.html",
+      "added": true
+    },
+    {
+      "name": "UsageMeter",
+      "group": "Feedback",
+      "summary": "Usage meters (quota against a limit), onboarding checklist and countdown.",
+      "path": "components/UsageMeter/preview.html",
+      "added": false
+    },
+    {
+      "name": "VectorSearch",
+      "group": "Expressive",
+      "summary": "A visual of semantic search: the question as a point, documents as dots, and lines drawn to the nearest matches.",
+      "path": "components/VectorSearch/preview.html",
+      "added": false
+    },
+    {
+      "name": "VoiceInput",
+      "group": "Agent",
+      "summary": "Voice orb for dictation/voice mode and a speech player for spoken agent output and meeting summaries.",
+      "path": "components/VoiceInput/preview.html",
+      "added": false
+    },
+    {
+      "name": "WordmarkColophon",
+      "title": "Wordmark colophon",
+      "group": "Marketing · Footers",
+      "family": "Footers",
+      "order": 18,
+      "summary": "An oversize serif sign-off with a practical link index.",
+      "path": "components/WordmarkColophon/preview.html",
+      "added": true
+    },
+    {
+      "name": "WorkspaceOnboarding",
+      "group": "Business",
+      "summary": "A four-step checklist with native controls and live progress.",
+      "path": "components/WorkspaceOnboarding/preview.html",
+      "added": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "grid",
+      "group": "Icons",
+      "path": "assets/Icons/grid.svg"
+    },
+    {
+      "name": "search",
+      "group": "Icons",
+      "path": "assets/Icons/search.svg"
+    },
+    {
+      "name": "plus",
+      "group": "Icons",
+      "path": "assets/Icons/plus.svg"
+    },
+    {
+      "name": "minus",
+      "group": "Icons",
+      "path": "assets/Icons/minus.svg"
+    },
+    {
+      "name": "check",
+      "group": "Icons",
+      "path": "assets/Icons/check.svg"
+    },
+    {
+      "name": "close",
+      "group": "Icons",
+      "path": "assets/Icons/close.svg"
+    },
+    {
+      "name": "arrow-right",
+      "group": "Icons",
+      "path": "assets/Icons/arrow-right.svg"
+    },
+    {
+      "name": "arrow-left",
+      "group": "Icons",
+      "path": "assets/Icons/arrow-left.svg"
+    },
+    {
+      "name": "arrow-up",
+      "group": "Icons",
+      "path": "assets/Icons/arrow-up.svg"
+    },
+    {
+      "name": "arrow-down",
+      "group": "Icons",
+      "path": "assets/Icons/arrow-down.svg"
+    },
+    {
+      "name": "chevron-down",
+      "group": "Icons",
+      "path": "assets/Icons/chevron-down.svg"
+    },
+    {
+      "name": "chevron-right",
+      "group": "Icons",
+      "path": "assets/Icons/chevron-right.svg"
+    },
+    {
+      "name": "play",
+      "group": "Icons",
+      "path": "assets/Icons/play.svg"
+    },
+    {
+      "name": "pause",
+      "group": "Icons",
+      "path": "assets/Icons/pause.svg"
+    },
+    {
+      "name": "stop",
+      "group": "Icons",
+      "path": "assets/Icons/stop.svg"
+    },
+    {
+      "name": "document",
+      "group": "Icons",
+      "path": "assets/Icons/document.svg"
+    },
+    {
+      "name": "folder",
+      "group": "Icons",
+      "path": "assets/Icons/folder.svg"
+    },
+    {
+      "name": "mail",
+      "group": "Icons",
+      "path": "assets/Icons/mail.svg"
+    },
+    {
+      "name": "calendar",
+      "group": "Icons",
+      "path": "assets/Icons/calendar.svg"
+    },
+    {
+      "name": "clock",
+      "group": "Icons",
+      "path": "assets/Icons/clock.svg"
+    },
+    {
+      "name": "person",
+      "group": "Icons",
+      "path": "assets/Icons/person.svg"
+    },
+    {
+      "name": "team",
+      "group": "Icons",
+      "path": "assets/Icons/team.svg"
+    },
+    {
+      "name": "lock",
+      "group": "Icons",
+      "path": "assets/Icons/lock.svg"
+    },
+    {
+      "name": "shield",
+      "group": "Icons",
+      "path": "assets/Icons/shield.svg"
+    },
+    {
+      "name": "chart",
+      "group": "Icons",
+      "path": "assets/Icons/chart.svg"
+    },
+    {
+      "name": "trend",
+      "group": "Icons",
+      "path": "assets/Icons/trend.svg"
+    },
+    {
+      "name": "filter",
+      "group": "Icons",
+      "path": "assets/Icons/filter.svg"
+    },
+    {
+      "name": "download",
+      "group": "Icons",
+      "path": "assets/Icons/download.svg"
+    },
+    {
+      "name": "upload",
+      "group": "Icons",
+      "path": "assets/Icons/upload.svg"
+    },
+    {
+      "name": "copy",
+      "group": "Icons",
+      "path": "assets/Icons/copy.svg"
+    },
+    {
+      "name": "link",
+      "group": "Icons",
+      "path": "assets/Icons/link.svg"
+    },
+    {
+      "name": "external",
+      "group": "Icons",
+      "path": "assets/Icons/external.svg"
+    },
+    {
+      "name": "sparkle",
+      "group": "Icons",
+      "path": "assets/Icons/sparkle.svg"
+    },
+    {
+      "name": "terminal",
+      "group": "Icons",
+      "path": "assets/Icons/terminal.svg"
+    },
+    {
+      "name": "database",
+      "group": "Icons",
+      "path": "assets/Icons/database.svg"
+    },
+    {
+      "name": "workflow",
+      "group": "Icons",
+      "path": "assets/Icons/workflow.svg"
+    },
+    {
+      "name": "code",
+      "group": "Icons",
+      "path": "assets/Icons/code.svg"
+    },
+    {
+      "name": "eye",
+      "group": "Icons",
+      "path": "assets/Icons/eye.svg"
+    },
+    {
+      "name": "warning",
+      "group": "Icons",
+      "path": "assets/Icons/warning.svg"
+    },
+    {
+      "name": "info",
+      "group": "Icons",
+      "path": "assets/Icons/info.svg"
+    },
+    {
+      "name": "refresh",
+      "group": "Icons",
+      "path": "assets/Icons/refresh.svg"
+    },
+    {
+      "name": "settings",
+      "group": "Icons",
+      "path": "assets/Icons/settings.svg"
+    },
+    {
+      "name": "receipt",
+      "group": "Icons",
+      "path": "assets/Icons/receipt.svg"
+    },
+    {
+      "name": "credit-card",
+      "group": "Icons",
+      "path": "assets/Icons/credit-card.svg"
+    },
+    {
+      "name": "globe",
+      "group": "Icons",
+      "path": "assets/Icons/globe.svg"
+    },
+    {
+      "name": "home",
+      "group": "Icons",
+      "path": "assets/Icons/home.svg"
+    },
+    {
+      "name": "bell",
+      "group": "Icons",
+      "path": "assets/Icons/bell.svg"
+    },
+    {
+      "name": "book",
+      "group": "Icons",
+      "path": "assets/Icons/book.svg"
+    },
+    {
+      "name": "layers",
+      "group": "Icons",
+      "path": "assets/Icons/layers.svg"
+    },
+    {
+      "name": "message",
+      "group": "Icons",
+      "path": "assets/Icons/message.svg"
+    },
+    {
+      "name": "sun",
+      "group": "Icons",
+      "path": "assets/Icons/sun.svg"
+    },
+    {
+      "name": "moon",
+      "group": "Icons",
+      "path": "assets/Icons/moon.svg"
+    },
+    {
+      "name": "image",
+      "group": "Icons",
+      "path": "assets/Icons/image.svg"
+    },
+    {
+      "name": "target",
+      "group": "Icons",
+      "path": "assets/Icons/target.svg"
+    },
+    {
+      "name": "archive",
+      "group": "Icons",
+      "path": "assets/Icons/archive.svg"
+    },
+    {
+      "name": "briefcase",
+      "group": "Icons",
+      "path": "assets/Icons/briefcase.svg"
+    },
+    {
+      "name": "heart",
+      "group": "Icons",
+      "path": "assets/Icons/heart.svg"
+    },
+    {
+      "name": "flag",
+      "group": "Icons",
+      "path": "assets/Icons/flag.svg"
+    },
+    {
+      "name": "key",
+      "group": "Icons",
+      "path": "assets/Icons/key.svg"
+    },
+    {
+      "name": "cpu",
+      "group": "Icons",
+      "path": "assets/Icons/cpu.svg"
+    },
+    {
+      "name": "meridian-mark",
+      "group": "Logos",
+      "path": "assets/Logos/meridian-mark.svg"
+    },
+    {
+      "name": "meridian-mark-dark",
+      "group": "Logos",
+      "path": "assets/Logos/meridian-mark-dark.svg"
+    },
+    {
+      "name": "meridian-lockup",
+      "group": "Logos",
+      "path": "assets/Logos/meridian-lockup.svg"
+    },
+    {
+      "name": "empty-inbox",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/empty-inbox.svg"
+    },
+    {
+      "name": "no-results",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/no-results.svg"
+    },
+    {
+      "name": "access-protected",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/access-protected.svg"
+    },
+    {
+      "name": "connected-workspace",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/connected-workspace.svg"
+    },
+    {
+      "name": "agent-ready",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/agent-ready.svg"
+    },
+    {
+      "name": "all-complete",
+      "group": "Illustrations",
+      "path": "assets/Illustrations/all-complete.svg"
+    },
+    {
+      "name": "fine-grid",
+      "group": "Backgrounds",
+      "path": "assets/Backgrounds/fine-grid.svg"
+    },
+    {
+      "name": "dot-field",
+      "group": "Backgrounds",
+      "path": "assets/Backgrounds/dot-field.svg"
+    },
+    {
+      "name": "diagonal",
+      "group": "Backgrounds",
+      "path": "assets/Backgrounds/diagonal.svg"
+    },
+    {
+      "name": "crosshair",
+      "group": "Backgrounds",
+      "path": "assets/Backgrounds/crosshair.svg"
+    },
+    {
+      "name": "contour-field",
+      "group": "Marketing",
+      "path": "assets/Marketing/contour-field.svg"
+    },
+    {
+      "name": "orbital-array",
+      "group": "Marketing",
+      "path": "assets/Marketing/orbital-array.svg"
+    },
+    {
+      "name": "clay-terraces",
+      "group": "Marketing",
+      "path": "assets/Marketing/clay-terraces.svg"
+    },
+    {
+      "name": "drafting-plates",
+      "group": "Marketing",
+      "path": "assets/Marketing/drafting-plates.svg"
+    }
+  ],
+  "patterns": [
+    {
+      "name": "Agent Operations Studio",
+      "path": "patterns/operations-studio.html",
+      "components": [
+        "Run timeline",
+        "Evidence inspector",
+        "Decision review",
+        "Budget meter",
+        "Audit log"
+      ],
+      "summary": "Review a ledger adjustment, inspect evidence and replay missed run events in a working reference application.",
+      "guide": "docs/operations-integration.md"
+    },
+    {
+      "name": "Business operations",
+      "path": "patterns/business-operations.html",
+      "components": [
+        "InvoiceWorkbench",
+        "SubscriptionUsage",
+        "AuditExplorer"
+      ]
+    },
+    {
+      "name": "Agent workspace",
+      "path": "patterns/agent-workspace.html",
+      "components": [
+        "AgentControlCenter",
+        "ActionReview",
+        "EvidencePanel",
+        "RunBudget"
+      ]
+    },
+    {
+      "name": "SaaS launch",
+      "path": "patterns/saas-launch.html",
+      "components": [
+        "MegaNavigation",
+        "ProductHero",
+        "PricingComparison",
+        "ConversionPanel",
+        "ResourceFooter"
+      ]
+    },
+    {
+      "name": "Workspace administration",
+      "path": "patterns/workspace-admin.html",
+      "components": [
+        "WorkspaceOnboarding",
+        "PermissionMatrix",
+        "IntegrationCatalog"
+      ]
+    },
+    {
+      "name": "Fieldwork editorial launch",
+      "path": "patterns/fieldwork-launch.html",
+      "components": [
+        "Editorial header",
+        "Fieldwork editorial hero",
+        "Snap plate gallery",
+        "Newsletter edition",
+        "Wordmark colophon"
+      ],
+      "summary": "An editorial launch page with original artwork, a horizontal gallery and a newsletter section."
+    },
+    {
+      "name": "Agent product launch",
+      "path": "patterns/agent-product-launch.html",
+      "components": [
+        "Launch megamenu",
+        "Product proof hero",
+        "Pinned chapters",
+        "Plan decision",
+        "Resource matrix footer"
+      ],
+      "summary": "A full product launch for agent operations, from proof of capability through pricing and resources."
+    }
+  ]
+}

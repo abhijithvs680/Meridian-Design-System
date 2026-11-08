@@ -1,0 +1,15 @@
+<!-- @dsCard group="Forms" height=320 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Combobox — preview</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:6px;width:280px">
+<span class="m-label">Customer</span>
+<span class="m-input-group"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg><input value="med" aria-label="Customer" role="combobox" aria-expanded="true" aria-controls="cb-customers" aria-autocomplete="list" aria-activedescendant="cb-opt-1"></span>
+<div class="m-popover is-flush"><div class="m-listbox" role="listbox" id="cb-customers" aria-label="Customers"><div class="m-option-group">Recent</div><div class="m-option" role="option" id="cb-opt-1" data-highlighted>Medley Pharmacy<small>Bengaluru</small></div><div class="m-option" role="option" aria-selected="true">Medora Labs<svg class="m-icon m-check-mark" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="m-option-group">All</div><div class="m-option" role="option">Medcrest Clinics<small>Chennai</small></div><div class="m-option" role="option" style="color:var(--primary-text)"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Create "med"</div></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;width:280px"><span class="m-label">Branches</span><span class="m-tags"><span class="m-tag">Bengaluru<button aria-label="Remove Bengaluru"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span><span class="m-tag">Chennai<button aria-label="Remove Chennai"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span><input placeholder="Add branch" aria-label="Branches"></span><span class="m-help">Multi-select: chips inside the field.</span></div>
+</div>
+</body>
+</html>

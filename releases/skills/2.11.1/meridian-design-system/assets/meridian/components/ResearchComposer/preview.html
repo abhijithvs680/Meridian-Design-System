@@ -1,0 +1,15 @@
+<!-- @dsCard group="Agent" height=520 -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ResearchComposer · Meridian</title><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../composer.css?v=2.11.1"></head><body class="mc-demo"><form class="mc" data-layout="research" data-size="expanded" aria-label="Research a question">
+  <h2 class="mc-title">Research a question</h2><label class="mc-check"><input type="checkbox" name="context" checked> Include the collections report</label>
+  <div class="mc-files" aria-label="Attached files"></div><input type="file" multiple hidden aria-label="Choose attachments">
+  <div class="mc-editor">
+    <textarea aria-label="Research a question" placeholder="What should the research cover?" rows="3"></textarea>
+    <div class="mc-toolbar">
+      <button type="button" class="mc-tool mc-icon-button" data-attach aria-label="Attach files"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 11l-8 8a4 4 0 0 1-6-6l9-9a3 3 0 1 1 4 4l-9 9a1.5 1.5 0 1 1-2-2l8-8"/></svg></button><label>Model preference<select name="model"><option>Balanced</option><option>Fast</option><option>Deep reasoning</option></select></label>
+      <button class="mc-send" type="submit" aria-label="Start research" data-send-label="Start research" disabled>
+        <span class="mc-send-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></span><span class="mc-stop-icon" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/></svg></span><span class="mc-send-text">Start research</span>
+      </button>
+    </div>
+  </div>
+  <p class="mc-status" role="status"></p>
+</form><script src="../composer.js?v=2.11.1"></script></body></html>

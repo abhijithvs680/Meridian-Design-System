@@ -1,0 +1,19 @@
+<!-- @dsCard group="Expressive" height=150 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>LivePill — preview</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center;min-height:110px">
+<div class="x-pill" id="pill" role="status" aria-live="polite"><span class="x-pill-orb"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.4 13.8 11.2 12 16l-1.8-4.8L5.5 9.4l4.7-1.8z"/></svg></span><span class="x-pill-text"><span id="pt">Billing agent</span><small id="ps">Reading 142 invoices</small></span><span class="x-pill-bar" aria-hidden="true"><i id="pb" style="width:20%"></i></span></div>
+</div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var p=document.getElementById('pill'),t=document.getElementById('pt'),s=document.getElementById('ps'),b=document.getElementById('pb');
+var steps=[["Billing agent","Reading 142 invoices",20,""],["Billing agent","Matching bank payments",55,""],["Billing agent","Drafting 4 reminders",85,""],["Needs your approval","4 reminders ready",100,"is-wait"],["Done","4 reminders sent",100,"is-done"]];
+var i=0;function go(){var c=steps[i%steps.length];p.className="x-pill is-open "+c[3];t.textContent=c[0];s.textContent=c[1];b.style.width=c[2]+"%";i++;}
+p.classList.add('is-open');if(!RM){setTimeout(go,600);setInterval(go,2200);}else{go();}
+
+</script>
+</body>
+</html>

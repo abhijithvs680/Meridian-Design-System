@@ -1,0 +1,16 @@
+<!-- @dsCard group="Expressive" height=280 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>CardStack — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center;padding-bottom:40px"><div class="x-stack" id="stk" tabindex="0" role="region" aria-roledescription="card stack" aria-label="Invoices to review, 3 left"><article class="x-stack-card" style="--d:0"><div style="display:flex;justify-content:space-between"><span class="m-mono">INV-2040</span><span class="m-badge m-badge-danger">Overdue 20d</span></div><div style="font-size:16px;font-weight:600;margin-top:18px">Sri Sai Labs</div><div class="m-stat-value" style="font-size:24px">₹86,200</div><div class="m-help">Swipe or press → to review the next one</div></article><article class="x-stack-card" style="--d:1"><div style="display:flex;justify-content:space-between"><span class="m-mono">INV-2033</span><span class="m-badge m-badge-warning">Awaiting approval</span></div><div style="font-size:16px;font-weight:600;margin-top:18px">Lotus Clinics</div><div class="m-stat-value" style="font-size:24px">₹64,000</div><div class="m-help">Swipe or press → to review the next one</div></article><article class="x-stack-card" style="--d:2"><div style="display:flex;justify-content:space-between"><span class="m-mono">INV-2039</span><span class="m-badge m-badge-agent">Agent drafting</span></div><div style="font-size:16px;font-weight:600;margin-top:18px">Brightwell Pharmacy</div><div class="m-stat-value" style="font-size:24px">₹42,900</div><div class="m-help">Swipe or press → to review the next one</div></article></div><button class="m-btn" id="nx">Next →</button></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var s=document.getElementById('stk');function next(){var cs=[].slice.call(s.querySelectorAll('.x-stack-card'));var top=cs.filter(function(c){return c.style.getPropertyValue('--d')==='0';})[0];top.classList.add('is-leaving');
+setTimeout(function(){cs.forEach(function(c){var d=+c.style.getPropertyValue('--d');c.style.setProperty('--d',d===0?cs.length-1:d-1);});top.classList.remove('is-leaving');},RM?0:380);}
+document.getElementById('nx').onclick=next;s.onkeydown=function(e){if(e.key==='ArrowRight')next();};
+
+</script>
+</body>
+</html>

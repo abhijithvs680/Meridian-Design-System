@@ -1,0 +1,23 @@
+<!-- @dsCard group="Expressive" height=260 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AgentCursor — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage"><form class="m-card" style="position:relative;max-width:420px;width:100%;display:flex;flex-direction:column;gap:14px" aria-describedby="cur-note">
+<div class="x-cursor" id="cur" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 1l13 7-6 1.5L6.5 16z" fill="var(--agent)" stroke="var(--surface)" stroke-width="1.5"/></svg><span>Billing agent</span></div>
+<label class="m-field"><span class="m-label">Customer</span><input class="m-input" id="f1"></label>
+<label class="m-field"><span class="m-label">Amount</span><input class="m-input" id="f2"></label>
+<label class="m-field"><span class="m-label">Due date</span><input class="m-input" id="f3"></label>
+<p class="m-help" id="cur-note" style="margin:0">The agent is filling this form from PO-7731. Fields stay editable.</p></form></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var cur=document.getElementById('cur'),F=[['f1','Sri Sai Labs'],['f2','₹86,200'],['f3','24 Nov 2026']];
+function fill(k){if(k>=F.length){setTimeout(function(){F.forEach(function(f){document.getElementById(f[0]).value='';});fill(0);},2600);return;}
+var el=document.getElementById(F[k][0]),r=el.getBoundingClientRect(),p=el.closest('form').getBoundingClientRect();cur.style.transform='translate('+(r.left-p.left+r.width-60)+'px,'+(r.top-p.top+18)+'px)';
+setTimeout(function(){el.classList.add('x-typing');var s=F[k][1],i=0;(function t(){el.value=s.slice(0,++i);if(i<s.length)setTimeout(t,RM?0:45);else{el.classList.remove('x-typing');setTimeout(function(){fill(k+1);},350);}})();},RM?0:700);}
+fill(0);
+
+</script>
+</body>
+</html>

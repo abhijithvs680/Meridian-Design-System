@@ -1,0 +1,16 @@
+<!-- @dsCard group="Expressive" height=320 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AgentLoop — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center"><div class="x-loop" role="img" aria-label="Agent loop: plan, act, observe, reflect. Iteration 3."><svg viewBox="0 0 260 260" aria-hidden="true"><circle class="ring" cx="130" cy="130" r="106"/><circle class="runner" id="run" r="6" cx="130" cy="24"/></svg><span class="x-loop-node" style="left:130px;top:22px">Plan</span><span class="x-loop-node" style="left:236px;top:130px">Act</span><span class="x-loop-node" style="left:130px;top:238px">Observe</span><span class="x-loop-node" style="left:24px;top:130px">Reflect</span><div class="x-loop-center"><b id="it">3</b>iteration</div></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var nodes=document.querySelectorAll('.x-loop-node'),run=document.getElementById('run'),it=document.getElementById('it'),a=-90,k=0,n=3;
+function step(){nodes.forEach(function(x,i){x.classList.toggle('is-active',i===k);});}
+step();if(!RM){setInterval(function(){a+=2;var r=a*Math.PI/180;run.setAttribute('cx',130+106*Math.cos(r));run.setAttribute('cy',130+106*Math.sin(r));var q=Math.floor(((a+90+360*10)%360)/90);if(q!==k){k=q;step();if(k===0){n++;it.textContent=n;}}},33);}
+
+</script>
+</body>
+</html>
