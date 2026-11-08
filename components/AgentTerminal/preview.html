@@ -1,0 +1,17 @@
+<!-- @dsCard group="Expressive" height=290 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AgentTerminal — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col"><div class="x-term"><div class="x-term-head"><span class="m-pulse"></span>billing-agent · run #4821<span style="margin-left:auto">live</span></div><div class="x-term-body" id="term" aria-live="polite"></div></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var L=[['dim','09:41:02 '],['ag','plan  '],['','reconcile South invoices (4 steps)\n'],['dim','09:41:03 '],['','tool  accounts.get_invoices(status="open")  '],['ok','✓ 142 rows\n'],['dim','09:41:07 '],['','tool  bank.get_txns(days=30)  '],['warn','⚠ timeout, using yesterday\'s statement\n'],['dim','09:41:12 '],['','match 118 / 142 paid  '],['ok','✓\n'],['dim','09:41:15 '],['ag','draft '],['','4 reminders → waiting for approval\n']];
+var t=document.getElementById('term');function all(){t.innerHTML=L.map(function(p){return '<span class="'+p[0]+'">'+p[1].replace(/</g,'&lt;')+'</span>';}).join('')+'<span class="x-caret"></span>';}
+if(RM){all();}else{var i=0,j=0,cur=null;function tick(){if(i>=L.length){t.insertAdjacentHTML('beforeend','<span class="x-caret"></span>');setTimeout(function(){t.innerHTML='';i=0;j=0;cur=null;tick();},4000);return;}
+if(!cur){cur=document.createElement('span');cur.className=L[i][0];t.appendChild(cur);}cur.textContent=L[i][1].slice(0,++j);if(j>=L[i][1].length){i++;j=0;cur=null;}setTimeout(tick,L[i-1]&&j===0?120:14);}tick();}
+
+</script>
+</body>
+</html>

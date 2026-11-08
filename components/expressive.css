@@ -1,0 +1,237 @@
+/* Meridian Expressive — opt-in motion layer. Load AFTER tokens.css and bundle.css.
+   Rule: expressive components celebrate, explain or reassure; they never carry information that the
+   core components don't also show. Everything degrades to a still, readable state under reduced motion. */
+:root {
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* 1. LivePill — expanding activity island */
+.x-pill { display: inline-flex; align-items: center; gap: var(--space-2); height: 36px; padding: 0 var(--space-3) 0 6px; border-radius: var(--radius-pill); background: var(--fg); color: var(--surface); font-size: 13px; font-weight: 500; overflow: hidden; max-width: 36px; transition: max-width 420ms var(--ease-spring), height 420ms var(--ease-spring), border-radius 420ms var(--ease-out); white-space: nowrap; box-shadow: var(--shadow-overlay); }
+.x-pill.is-open { max-width: 420px; }
+.x-pill.is-tall { height: 64px; border-radius: 22px; padding: 0 var(--space-4) 0 10px; }
+.x-pill-orb { width: 24px; height: 24px; flex: none; border-radius: var(--radius-pill); background: var(--agent-soft); display: inline-flex; align-items: center; justify-content: center; color: var(--agent-text); position: relative; }
+.x-pill-orb::after { content: ""; position: absolute; inset: -3px; border-radius: inherit; border: 1px solid var(--agent-text); opacity: .35; animation: x-ping 1.6s var(--ease-out) infinite; }
+.x-pill.is-done .x-pill-orb { background: var(--success-soft); color: var(--success-text); }
+.x-pill.is-done .x-pill-orb::after, .x-pill.is-wait .x-pill-orb::after { animation: none; opacity: 0; }
+.x-pill.is-wait .x-pill-orb { background: var(--warning-soft); color: var(--warning-text); }
+.x-pill-text { opacity: 0; transform: translateY(4px); transition: opacity 240ms 120ms, transform 320ms 120ms var(--ease-out); display: flex; flex-direction: column; line-height: 18px; }
+.x-pill.is-open .x-pill-text { opacity: 1; transform: none; }
+.x-pill-text small { font-size: 12px; opacity: .7; font-weight: 400; }
+.x-pill-bar { width: 72px; height: 4px; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--surface) 25%, transparent); overflow: hidden; margin-inline-start: var(--space-2); }
+.x-pill-bar i { display: block; height: 100%; background: var(--surface); border-radius: inherit; transition: width 600ms var(--ease-out); }
+@keyframes x-ping { from { transform: scale(1); opacity: .55; } to { transform: scale(1.6); opacity: 0; } }
+
+/* 2. MorphButton — idle → working → done, and two-step confirm */
+.x-morph { position: relative; overflow: hidden; transition: width 360ms var(--ease-spring), background var(--duration-base), border-color var(--duration-base), color var(--duration-base); }
+.x-morph .x-label { display: inline-flex; align-items: center; gap: var(--space-2); transition: opacity 180ms, transform 280ms var(--ease-out); }
+.x-morph[data-state="working"] { cursor: progress; }
+.x-morph[data-state="done"] { background: var(--success); border-color: var(--success); color: var(--on-primary); }
+.x-morph[data-state="confirm"] { background: var(--danger); border-color: var(--danger); color: var(--on-danger); }
+.x-check-draw path { stroke-dasharray: 24; stroke-dashoffset: 24; animation: x-draw 420ms 80ms var(--ease-out) forwards; }
+@keyframes x-draw { to { stroke-dashoffset: 0; } }
+.x-label.is-enter { animation: x-rise 300ms var(--ease-out); }
+@keyframes x-rise { from { opacity: 0; transform: translateY(8px); } }
+
+/* 3. SlidingTabs — gliding indicator */
+.x-tabs { position: relative; display: inline-flex; width: fit-content; padding: 3px; border-radius: var(--radius-md); background: var(--surface-sunken); isolation: isolate; }
+.x-tabs button { position: relative; z-index: 1; font: inherit; font-weight: 500; font-size: 13px; height: 30px; padding: 0 var(--space-4); border: 0; background: none; color: var(--fg-muted); cursor: pointer; border-radius: var(--radius-sm); transition: color var(--duration-base); }
+.x-tabs button[aria-selected="true"] { color: var(--fg); }
+.x-tabs button:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 1px; }
+.x-tabs-ind { position: absolute; z-index: 0; top: 3px; bottom: 3px; left: 0; border-radius: var(--radius-sm); background: var(--surface); box-shadow: var(--shadow-raised), 0 0 0 1px var(--border); transition: transform 380ms var(--ease-spring), width 380ms var(--ease-spring); }
+.x-underline-tabs { position: relative; display: flex; gap: var(--space-5); border-bottom: 1px solid var(--border); }
+.x-underline-tabs .x-tabs-ind { top: auto; bottom: -1px; height: 2px; background: var(--primary); box-shadow: none; border-radius: 2px; }
+
+/* 4. Dock — magnifying launcher */
+.x-dock { display: inline-flex; align-items: flex-end; gap: 6px; padding: 8px 10px; border-radius: 18px; background: color-mix(in srgb, var(--surface) 80%, transparent); border: 1px solid var(--border); box-shadow: var(--shadow-overlay); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); }
+.x-dock-item { position: relative; width: 44px; height: 44px; border-radius: 12px; border: 0; background: var(--surface-sunken); color: var(--fg-muted); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transform-origin: bottom center; transition: transform 200ms var(--ease-out), background var(--duration-fast), color var(--duration-fast); transform: scale(var(--s, 1)); margin: 0 calc((var(--s, 1) - 1) * 14px); }
+.x-dock-item:hover, .x-dock-item:focus-visible { background: var(--primary-soft); color: var(--primary-text); outline: 0; }
+.x-dock-item.is-agent { background: var(--agent); color: var(--on-agent); }
+.x-dock-item .m-icon { width: 20px; height: 20px; }
+.x-dock-item::after { content: attr(data-label); position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(4px) scale(calc(1 / var(--s, 1))); background: var(--tooltip-bg); color: var(--tooltip-fg); font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: var(--radius-sm); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 150ms, transform 200ms var(--ease-out); }
+.x-dock-item:hover::after, .x-dock-item:focus-visible::after { opacity: 1; transform: translateX(-50%) scale(calc(1 / var(--s, 1))); }
+.x-dock-item[aria-current="page"]::before { content: ""; position: absolute; bottom: -6px; width: 4px; height: 4px; border-radius: 50%; background: var(--fg-muted); }
+.x-dock-sep { width: 1px; height: 32px; background: var(--border); margin: 0 4px 6px; }
+
+/* 5. RadialMenu — actions orbit a trigger */
+.x-radial { position: relative; width: 200px; height: 200px; }
+.x-radial-trigger { position: absolute; left: 50%; top: 50%; width: 52px; height: 52px; margin: -26px; border-radius: 50%; border: 0; background: var(--agent); color: var(--on-agent); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px var(--agent-soft); transition: transform 300ms var(--ease-spring); z-index: 2; }
+.x-radial.is-open .x-radial-trigger { transform: rotate(135deg); }
+.x-radial-item { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--fg); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-raised); transform: rotate(var(--a)) translate(0) rotate(calc(-1 * var(--a))) scale(.4); opacity: 0; transition: transform 380ms var(--ease-spring) calc(var(--i) * 40ms), opacity 200ms calc(var(--i) * 40ms); }
+.x-radial.is-open .x-radial-item { transform: rotate(var(--a)) translate(72px) rotate(calc(-1 * var(--a))) scale(1); opacity: 1; }
+.x-radial-item:hover, .x-radial-item:focus-visible { background: var(--primary-soft); color: var(--primary-text); outline: 0; }
+
+/* 6. CardStack — fanned stack of records */
+.x-stack { position: relative; width: 300px; height: 180px; }
+.x-stack-card { position: absolute; inset: 0; border-radius: var(--card-radius); border: 1px solid var(--border); background: var(--surface); padding: var(--space-4) var(--space-5); box-sizing: border-box; box-shadow: var(--shadow-raised); transform: translateY(calc(var(--d) * 10px)) scale(calc(1 - var(--d) * .05)); opacity: calc(1 - var(--d) * .22); z-index: calc(10 - var(--d)); transition: transform 420ms var(--ease-spring), opacity 300ms; }
+.x-stack:hover .x-stack-card { transform: translateY(calc(var(--d) * 18px)) rotate(calc(var(--d) * 1.5deg)) scale(calc(1 - var(--d) * .04)); }
+.x-stack-card.is-leaving { transform: translateX(120%) rotate(12deg) !important; opacity: 0 !important; }
+
+/* 7. ProgressRings */
+.x-rings circle { fill: none; stroke-linecap: round; }
+.x-rings .track { stroke: var(--surface-sunken); }
+.x-rings .val { transition: stroke-dashoffset 1200ms var(--ease-out); }
+.x-rings-legend { display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; }
+.x-rings-legend b { font-variant-numeric: tabular-nums; font-weight: 600; }
+.x-rings-legend span { display: flex; align-items: center; gap: var(--space-2); }
+.x-rings-legend span::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+
+/* 8. RollingNumber — odometer */
+.x-roll { display: inline-flex; font-variant-numeric: tabular-nums; overflow: hidden; line-height: 1; }
+.x-roll-col { display: inline-block; height: 1em; overflow: hidden; }
+.x-roll-col span { display: flex; flex-direction: column; transition: transform 900ms var(--ease-out); transform: translateY(calc(var(--n) * -1em)); }
+.x-roll-col span i { font-style: normal; height: 1em; }
+.x-roll-static { display: inline-block; }
+
+/* 9. DateReel — wheel picker */
+.x-reel { position: relative; display: flex; gap: 2px; height: 180px; padding: 0 var(--space-2); border-radius: var(--card-radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden; width: fit-content; }
+.x-reel::before { content: ""; position: absolute; left: 8px; right: 8px; top: 72px; height: 36px; border-radius: var(--radius-md); background: var(--surface-sunken); z-index: 0; }
+.x-reel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(var(--surface), transparent 32%, transparent 68%, var(--surface)); pointer-events: none; z-index: 2; }
+.x-reel-col { position: relative; z-index: 1; overflow-y: auto; scroll-snap-type: y mandatory; scrollbar-width: none; padding: 72px 0; text-align: center; font-variant-numeric: tabular-nums; outline: 0; }
+.x-reel-col::-webkit-scrollbar { display: none; }
+.x-reel-col div { height: 36px; line-height: 36px; padding: 0 var(--space-3); scroll-snap-align: center; font-size: 17px; color: var(--fg-muted); }
+.x-reel-col div.sel { color: var(--fg); font-weight: 600; }
+.x-reel-col:focus-visible { box-shadow: inset 0 0 0 2px var(--focus-ring); border-radius: var(--radius-md); }
+
+/* 10. Keycaps */
+.x-keys { display: inline-flex; gap: 6px; align-items: center; }
+.x-key { min-width: 40px; height: 40px; padding: 0 10px; box-sizing: border-box; border-radius: 9px; background: var(--surface); border: 1px solid var(--border-strong); box-shadow: 0 3px 0 var(--border-strong), 0 4px 8px rgba(0, 0, 0, .06); display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: var(--fg); transition: transform 90ms, box-shadow 90ms; }
+.x-key.is-down { transform: translateY(3px); box-shadow: 0 0 0 var(--border-strong); background: var(--primary-soft); border-color: var(--primary); color: var(--primary-text); }
+.x-key small { font-size: 11px; font-weight: 500; color: var(--fg-muted); margin-inline-start: 4px; }
+.x-keys .plus { color: var(--fg-subtle); font-size: 13px; }
+
+/* 11. AgentTerminal — streaming log */
+.x-term { border-radius: var(--card-radius); background: var(--terminal-bg); color: var(--terminal-fg); font-family: var(--font-mono); font-size: 12.5px; line-height: 20px; overflow: hidden; width: 100%; border: 1px solid var(--terminal-border); }
+.x-term-head { display: flex; align-items: center; gap: var(--space-2); padding: 8px 12px; border-bottom: 1px solid var(--terminal-border); color: var(--terminal-muted); font-family: var(--font-sans); font-size: 12px; }
+.x-term-head .m-pulse { background: var(--terminal-agent); }
+.x-term-body { padding: 12px 14px; min-height: 160px; white-space: pre-wrap; }
+.x-term .ok { color: var(--terminal-ok); } .x-term .warn { color: var(--terminal-warn); } .x-term .dim { color: var(--terminal-muted); } .x-term .ag { color: var(--terminal-agent); }
+.x-caret { display: inline-block; width: 7px; height: 15px; background: var(--terminal-fg); vertical-align: -2px; animation: x-blink 1s steps(1) infinite; }
+@keyframes x-blink { 50% { opacity: 0; } }
+
+/* 12. AgentOrb — Meridian's agent character */
+.x-orb { --size: 96px; position: relative; width: var(--size); height: var(--size); }
+.x-orb svg { width: 100%; height: 100%; overflow: visible; }
+.x-orb .body { fill: var(--agent); }
+.x-orb .halo { fill: none; stroke: var(--agent); stroke-width: 2; opacity: .25; transform-origin: 50% 50%; }
+.x-orb .meridian { fill: none; stroke: var(--on-agent); stroke-width: 3.5; stroke-linecap: round; opacity: .55; transform-origin: 50% 50%; }
+.x-orb .eye { fill: var(--on-agent); transform-box: fill-box; transform-origin: center; animation: x-blinkeye 5s infinite; }
+.x-orb[data-state="thinking"] .meridian { animation: x-spin 1.8s linear infinite; }
+.x-orb[data-state="thinking"] .eye { transform: translateY(-3px) scaleY(.8); animation: none; }
+.x-orb[data-state="listening"] .halo { animation: x-breathe 1.4s var(--ease-in-out) infinite; }
+.x-orb[data-state="done"] .body { fill: var(--success); }
+.x-orb[data-state="done"] .eye { transform: scaleY(.35); animation: none; }
+.x-orb[data-state="waiting"] .body { fill: var(--warning); }
+.x-orb[data-state="error"] .body { fill: var(--danger); }
+.x-orb[data-state="error"] .eye { transform: scaleY(.5) translateY(2px); animation: none; }
+.x-orb .whole { transform-origin: 50% 90%; animation: x-float 4s var(--ease-in-out) infinite; }
+@keyframes x-spin { to { transform: rotate(360deg); } }
+@keyframes x-breathe { 50% { transform: scale(1.18); opacity: .5; } }
+@keyframes x-float { 50% { transform: translateY(-3px); } }
+@keyframes x-blinkeye { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+
+/* 13. AgentCursor — the agent filling a form */
+.x-cursor { position: absolute; left: 0; top: 0; pointer-events: none; transition: transform 700ms var(--ease-in-out); z-index: 5; }
+.x-cursor svg { display: block; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .2)); }
+.x-cursor span { display: inline-block; margin-block-start: -2px; margin-inline-start: 14px; background: var(--agent); color: var(--on-agent); font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 0 6px 6px 6px; white-space: nowrap; }
+.x-typing { box-shadow: 0 0 0 3px color-mix(in srgb, var(--agent) 25%, transparent); border-color: var(--agent) !important; }
+
+/* 14. GenerationReveal — content resolves from blocks */
+.x-gen { position: relative; border-radius: var(--card-radius); overflow: hidden; }
+.x-gen-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr); }
+.x-gen-grid i { background: var(--agent-soft); transition: opacity 500ms var(--ease-out); transition-delay: calc(var(--k) * 14ms); }
+.x-gen.is-done .x-gen-grid i { opacity: 0; }
+.x-gen-label { position: absolute; inset-inline-start: 12px; bottom: 12px; z-index: 2; transition: opacity 300ms; }
+.x-gen.is-done .x-gen-label { opacity: 0; }
+
+/* 15. SpotlightCard — pointer-following light */
+.x-spot { position: relative; border-radius: var(--card-radius); padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); overflow: hidden; isolation: isolate; }
+.x-spot::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: radial-gradient(240px circle at var(--x, 50%) var(--y, 0%), var(--primary), transparent 60%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity 300ms; }
+.x-spot::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(320px circle at var(--x, 50%) var(--y, 0%), color-mix(in srgb, var(--primary) 7%, transparent), transparent 60%); opacity: 0; transition: opacity 300ms; }
+.x-spot:hover::before, .x-spot:hover::after, .x-spot:focus-within::before { opacity: 1; }
+
+/* 16. FrostedPanel — translucent layer over content */
+.x-frost { background: color-mix(in srgb, var(--surface) 72%, transparent); backdrop-filter: blur(20px) saturate(1.5); -webkit-backdrop-filter: blur(20px) saturate(1.5); border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); border-radius: 16px; box-shadow: 0 1px 0 color-mix(in srgb, var(--surface) 40%, transparent) inset, var(--shadow-overlay); }
+@supports not (backdrop-filter: blur(1px)) { .x-frost { background: var(--surface); } }
+
+/* 17. AgentLoop — animated cycle */
+.x-loop { position: relative; width: 260px; height: 260px; }
+.x-loop svg { position: absolute; inset: 0; }
+.x-loop .ring { fill: none; stroke: var(--border); stroke-width: 2; stroke-dasharray: 4 6; }
+.x-loop .runner { fill: var(--agent); }
+.x-loop-node { position: absolute; transform: translate(-50%, -50%); padding: 6px 12px; border-radius: var(--radius-pill); background: var(--surface); border: 1px solid var(--border-strong); font-size: 13px; font-weight: 500; transition: background 300ms, color 300ms, border-color 300ms, transform 300ms var(--ease-spring); white-space: nowrap; }
+.x-loop-node.is-active { background: var(--agent); color: var(--on-agent); border-color: var(--agent); transform: translate(-50%, -50%) scale(1.08); }
+.x-loop-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 12px; color: var(--fg-muted); }
+.x-loop-center b { display: block; font-size: 22px; color: var(--fg); font-variant-numeric: tabular-nums; }
+
+/* 18. DataFlow — packets along edges */
+.x-flow svg { width: 100%; height: auto; overflow: visible; }
+.x-flow .edge { fill: none; stroke: var(--border-strong); stroke-width: 1.5; }
+.x-flow .edge.is-live { stroke: color-mix(in srgb, var(--primary) 45%, var(--border)); }
+.x-flow .packet { fill: var(--primary); }
+.x-flow .packet.is-agent { fill: var(--agent); }
+.x-flow .node rect { fill: var(--surface); stroke: var(--border-strong); }
+.x-flow .node.is-agent rect { fill: var(--agent-soft); stroke: var(--agent); }
+.x-flow .node.is-down rect { stroke: var(--danger); stroke-dasharray: 4 3; }
+.x-flow .node text { fill: var(--fg); font: 500 12px var(--font-sans); }
+.x-flow .node .sub { fill: var(--fg-subtle); font-size: 10.5px; font-weight: 400; }
+
+/* 19. TextReveal — words arrive */
+.x-reveal .w { display: inline-block; opacity: 0; transform: translateY(6px); filter: blur(3px); animation: x-word 520ms var(--ease-out) forwards; animation-delay: calc(var(--i) * 45ms); }
+@keyframes x-word { to { opacity: 1; transform: none; filter: none; } }
+.x-reveal.is-paused .w { animation-play-state: paused; }
+
+/* 20. SuccessMoment — quiet celebration */
+.x-success { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-align: center; }
+.x-success-mark { position: relative; width: 72px; height: 72px; }
+.x-success-mark .disc { fill: var(--success); transform-origin: center; animation: x-pop 520ms var(--ease-spring) both; }
+.x-success-mark .tick { fill: none; stroke: var(--on-primary); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: x-draw 420ms 300ms var(--ease-out) forwards; }
+.x-success-mark .ripple { fill: none; stroke: var(--success); stroke-width: 2; transform-origin: center; animation: x-ripple 1100ms 200ms var(--ease-out) both; }
+.x-success-mark .ripple.r2 { animation-delay: 380ms; }
+.x-success-mark .spark { fill: var(--success); transform-origin: 36px 36px; animation: x-sparks 700ms 260ms var(--ease-out) both; }
+@keyframes x-pop { from { transform: scale(.2); } }
+@keyframes x-ripple { from { transform: scale(.6); opacity: .7; } to { transform: scale(1.6); opacity: 0; } }
+@keyframes x-sparks { from { transform: rotate(var(--r)) translateY(-18px) scale(0); opacity: 1; } to { transform: rotate(var(--r)) translateY(-46px) scale(1); opacity: 0; } }
+
+/* 21. VectorSearch — nearest neighbours */
+.x-vec svg { display: block; width: 100%; height: auto; aspect-ratio: 520 / 210; }
+.x-vec-hits { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.x-vec .pt { fill: var(--border-strong); transition: fill 300ms, r 300ms; }
+.x-vec .pt.is-hit { fill: var(--primary); }
+.x-vec .q { fill: var(--agent); }
+.x-vec .q-ring { fill: none; stroke: var(--agent); stroke-width: 1.5; stroke-dasharray: 3 4; opacity: .6; }
+.x-vec .link { stroke: var(--primary); stroke-width: 1.25; stroke-dasharray: 120; stroke-dashoffset: 120; transition: stroke-dashoffset 700ms var(--ease-out); }
+.x-vec.is-searched .link { stroke-dashoffset: 0; }
+.x-vec .lbl { fill: var(--fg-muted); font: 11px var(--font-sans); }
+
+/* 22. ImageCompare — before/after */
+.x-compare { position: relative; overflow: hidden; border-radius: var(--card-radius); border: 1px solid var(--border); user-select: none; }
+.x-compare > .after { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.x-compare-handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; margin-left: -1px; background: var(--surface); box-shadow: 0 0 0 1px rgba(0, 0, 0, .15); pointer-events: none; }
+.x-compare-handle::after { content: "⟷"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; border-radius: 50%; background: var(--surface); color: var(--fg); display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: var(--shadow-overlay); }
+.x-compare input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.x-compare input:focus-visible + .x-compare-handle::after { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.x-compare-tag { position: absolute; top: 10px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--fg) 70%, transparent); color: var(--surface); }
+
+/* 23. TeamSwitcher */
+.x-team { display: inline-flex; align-items: center; gap: var(--space-2); height: 40px; padding: 0 var(--space-2) 0 4px; border-radius: var(--radius-md); border: 1px solid transparent; background: none; font: inherit; color: var(--fg); cursor: pointer; transition: background var(--duration-fast); }
+.x-team:hover { background: var(--surface-hover); }
+.x-team-logo { width: 30px; height: 30px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--surface); }
+.x-team-meta { display: flex; flex-direction: column; text-align: start; line-height: 16px; }
+.x-team-meta small { font-size: 12px; color: var(--fg-subtle); }
+.x-team-list .m-option { min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .x-pill, .x-pill-text, .x-tabs-ind, .x-dock-item, .x-radial-item, .x-radial-trigger, .x-stack-card, .x-rings .val, .x-roll-col span, .x-cursor, .x-gen-grid i, .x-loop-node, .x-vec .link, .x-morph { transition: none !important; }
+  .x-pill-orb::after, .x-orb *, .x-term .x-caret, .x-reveal .w, .x-success-mark *, .x-check-draw path { animation: none !important; }
+  .x-reveal .w { opacity: 1; transform: none; filter: none; }
+  .x-success-mark .tick, .x-check-draw path { stroke-dashoffset: 0; }
+  .x-success-mark .ripple, .x-success-mark .spark { display: none; }
+  .x-flow .packet { display: none; }
+  .x-dock-item { transform: none; margin: 0; }
+}
+@media (prefers-reduced-transparency: reduce) { .x-frost, .x-dock { background: var(--surface); backdrop-filter: none; -webkit-backdrop-filter: none; } }
+/* Before/after comparison is spatial, not textual: keep it left-to-right in every locale. */
+.x-compare { direction: ltr; }
+[dir="rtl"] .x-pill-bar i { margin-inline-start: auto; }

@@ -1,0 +1,19 @@
+<!-- @dsCard group="Expressive" height=230 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ProgressRings — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="gap:28px"><svg class="x-rings" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Collections 82% of target, approvals 60%, agent accuracy 94%" id="rings">
+<g transform="rotate(-90 80 80)"><circle class="track" cx="80" cy="80" r="68" stroke-width="14"/><circle class="val" cx="80" cy="80" r="68" stroke-width="14" stroke="var(--chart-1)" data-v="82"/>
+<circle class="track" cx="80" cy="80" r="50" stroke-width="14"/><circle class="val" cx="80" cy="80" r="50" stroke-width="14" stroke="var(--chart-2)" data-v="60"/>
+<circle class="track" cx="80" cy="80" r="32" stroke-width="14"/><circle class="val" cx="80" cy="80" r="32" stroke-width="14" stroke="var(--agent)" data-v="94"/></g></svg>
+<div class="x-rings-legend"><span style="--c:var(--chart-1)">Collections <b>82%</b></span><span style="--c:var(--chart-2)">Approvals cleared <b>60%</b></span><span style="--c:var(--agent)">Agent accuracy <b>94%</b></span><button class="m-btn m-btn-sm" id="rr" style="margin-top:8px;align-self:flex-start">Replay</button></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function draw(reset){document.querySelectorAll('#rings .val').forEach(function(c){var r=+c.getAttribute('r'),L=2*Math.PI*r;c.style.strokeDasharray=L;if(reset){c.style.transition='none';c.style.strokeDashoffset=L;void c.getBoundingClientRect();c.style.transition='';}c.style.strokeDashoffset=L*(1-c.dataset.v/100);});}
+draw(true);document.getElementById('rr').onclick=function(){draw(true);};
+
+</script>
+</body>
+</html>

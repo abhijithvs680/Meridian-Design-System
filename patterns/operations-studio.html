@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Operations Studio · Meridian</title>
+  <link rel="stylesheet" href="../tokens.css?v=2.9.1">
+  <link rel="stylesheet" href="../components/bundle.css">
+  <link rel="stylesheet" href="../operations/operations.css">
+</head>
+<body class="mo-page">
+  <a class="mo-skip" href="#run-main">Skip to run</a>
+  <header class="mo-topbar">
+    <a href="../index.html#components/operations-studio" class="mo-brand"><img src="../assets/Logos/meridian-mark.svg" alt=""> Meridian <span> / </span> Operations</a>
+    <span class="mo-environment"><i></i> Simulation environment</span>
+  </header>
+  <main id="run-main" class="mo-shell">
+    <nav class="mo-breadcrumb" aria-label="Breadcrumb">Workspace <span>/</span> Finance operations <span>/</span> Agent runs</nav>
+    <div class="mo-heading">
+      <div>
+        <h1>Run review</h1>
+        <p>Review invoice exceptions and authorize a proposed ledger change.</p>
+      </div>
+      <div class="mo-controls">
+        <label>Scenario
+          <select id="scenario">
+            <option value="approval">Ledger exception</option>
+            <option value="failure">Connector failure</option>
+            <option value="expiry">Expired proposal</option>
+          </select>
+        </label>
+        <button type="button" class="m-btn" id="reset-run">Reset</button>
+      </div>
+    </div>
+    <div class="mo-stats">
+      <div><span>Run state</span><strong data-run-status role="status"></strong><small id="run-id"></small></div>
+      <div><span>Run spend</span><strong>$<span data-run-spend>0.00</span></strong><small data-run-limit></small><progress data-run-budget aria-label="Run budget used"></progress></div>
+      <div><span>Event cursor</span><strong data-run-cursor>000</strong><small id="connection-label"></small></div>
+    </div>
+    <div class="mo-command">
+      <div><strong id="run-name">Ledger exception</strong><small>Finance connector · approval required for writes</small></div>
+      <div class="mo-actions">
+        <button type="button" class="m-btn" id="connection">Disconnect</button>
+        <button type="button" class="m-btn" id="cancel-run">Cancel run</button>
+        <button type="button" class="m-btn m-btn-primary" id="run-action">Start run</button>
+      </div>
+    </div>
+    <p id="run-feedback" class="mo-feedback" role="status"></p>
+    <p data-run-summary class="mo-summary" role="status"></p>
+    <div class="mo-columns">
+      <div class="mo-column">
+      <section class="mo-panel">
+        <header><div><h2>Execution timeline</h2><p>Tool activity and recorded outcomes</p></div><span class="mo-chip">Run trace</span></header>
+        <p class="mo-empty" data-steps-empty>Start the run to inspect its tool activity.</p>
+        <ol data-run-steps class="mo-timeline"></ol>
+      </section>
+      <section class="mo-panel">
+        <header><div><h2>Evidence</h2><p>Source excerpts and document versions</p></div></header>
+        <p class="mo-empty" data-evidence-empty>Sources appear as the run retrieves them.</p>
+        <div data-run-evidence class="mo-panel-body"></div>
+      </section>
+      </div>
+      <div class="mo-column">
+      <section class="mo-panel mo-review">
+        <header><div><h2>Decision review</h2><p>Changes requiring human authorization</p></div><span class="mo-chip">Write gate</span></header>
+        <div data-run-review tabindex="-1" class="mo-panel-body"></div>
+      </section>
+      <section class="mo-panel">
+        <header><div><h2>Audit log</h2><p>Events received by this client</p></div><button id="export-audit" type="button" class="m-btn">Export JSON</button></header>
+        <p class="mo-empty" data-audit-empty>No events received.</p>
+        <ol data-run-audit class="mo-audit"></ol>
+      </section>
+      </div>
+    </div>
+    <footer>Meridian Operations Studio <span>Fictional ledger · local event transport</span></footer>
+  </main>
+  <script type="module" src="../operations/studio.mjs"></script>
+</body>
+</html>

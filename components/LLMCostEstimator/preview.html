@@ -1,0 +1,12 @@
+<!-- @dsCard group="Agent" height=400 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>LLMCostEstimator — preview</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col">
+<section class="m-llm-cost-estimator" aria-label="Estimated monthly model cost"><div class="m-llm-cost-estimator-inputs"><label class="m-field"><span class="m-label">Requests per day</span><input class="m-input m-num" value="2,000" inputmode="numeric"></label><label class="m-field"><span class="m-label">Input tokens / request</span><input class="m-input m-num" value="1,800" inputmode="numeric"></label><label class="m-field"><span class="m-label">Output tokens / request</span><input class="m-input m-num" value="400" inputmode="numeric"></label></div>
+<table class="m-table"><caption class="m-sr">Estimated monthly cost by model</caption><thead><tr><th scope="col">Model</th><th scope="col">Provider</th><th scope="col" class="r">Price per 1M in / out</th><th scope="col">Relative</th><th scope="col" class="r">Per month</th></tr></thead><tbody><tr class="m-llm-cost-estimator-row is-cheapest"><td>Fast model</td><td class="muted">Provider A</td><td class="r m-num">$0.10 / $0.40</td><td><div class="bar"><i style="width:3%"></i></div></td><td class="r m-num"><b>₹1,714</b></td></tr><tr class="m-llm-cost-estimator-row"><td>Balanced model</td><td class="muted">Provider B</td><td class="r m-num">$0.80 / $3.20</td><td><div class="bar"><i style="width:24%"></i></div></td><td class="r m-num"><b>₹13,709</b></td></tr><tr class="m-llm-cost-estimator-row"><td>Large model</td><td class="muted">Provider C</td><td class="r m-num">$3.00 / $15.00</td><td><div class="bar"><i style="width:100%"></i></div></td><td class="r m-num"><b>₹57,456</b></td></tr></tbody></table>
+<div class="m-llm-cost-estimator-foot"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></svg> Sample prices for illustration, entered 8 Nov 2026 · USD converted at ₹84 · 30-day month · excludes caching discounts</div></section>
+</div>
+</body>
+</html>

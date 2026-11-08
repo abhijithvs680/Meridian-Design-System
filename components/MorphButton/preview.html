@@ -1,0 +1,22 @@
+<!-- @dsCard group="Expressive" height=170 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>MorphButton — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col">
+<div class="m-row"><span class="m-state-label">Save</span><button class="m-btn m-btn-primary x-morph" id="mb" data-state="idle"><span class="x-label"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>Save changes</span></button><span class="m-help">Click it</span></div>
+<div class="m-row"><span class="m-state-label">Confirm</span><button class="m-btn x-morph" id="cb" data-state="idle"><span class="x-label"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>Delete filter</span></button><span class="m-help">Click twice to delete</span></div>
+</div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function label(el,html){var l=el.querySelector('.x-label');l.innerHTML=html;l.classList.remove('is-enter');void l.offsetWidth;l.classList.add('is-enter');}
+var mb=document.getElementById('mb');mb.onclick=function(){if(mb.dataset.state!=='idle')return;mb.dataset.state='working';mb.setAttribute('aria-busy','true');label(mb,'<span class="m-spinner"></span>Saving');
+setTimeout(function(){mb.dataset.state='done';mb.removeAttribute('aria-busy');label(mb,'<svg class="m-icon x-check-draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Saved');
+setTimeout(function(){mb.dataset.state='idle';label(mb,'<svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg>Save changes');},1800);},1100);};
+var cb=document.getElementById('cb'),tm;cb.onclick=function(){if(cb.dataset.state==='idle'){cb.dataset.state='confirm';label(cb,'Click again to delete');tm=setTimeout(function(){cb.dataset.state='idle';label(cb,'<svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>Delete filter');},3000);}
+else if(cb.dataset.state==='confirm'){clearTimeout(tm);cb.dataset.state='done';label(cb,'<svg class="m-icon x-check-draw" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Deleted');setTimeout(function(){cb.dataset.state='idle';label(cb,'<svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>Delete filter');},1800);}};
+
+</script>
+</body>
+</html>

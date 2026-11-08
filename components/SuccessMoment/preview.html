@@ -1,0 +1,14 @@
+<!-- @dsCard group="Expressive" height=260 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SuccessMoment — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center"><div class="x-success" id="sm" role="status"><svg class="x-success-mark" viewBox="0 0 72 72" aria-hidden="true"><circle class="ripple" cx="36" cy="36" r="30"/><circle class="ripple r2" cx="36" cy="36" r="30"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:0deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:45deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:90deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:135deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:180deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:225deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:270deg"/><circle class="spark" cx="36" cy="36" r="2.5" style="--r:315deg"/><circle class="disc" cx="36" cy="36" r="28"/><path class="tick" d="M24 37l8 8 16-17"/></svg><div><div class="m-card-title">4 reminders sent</div><p class="m-help" style="margin:4px 0 0">Approved by you · the agent will report replies on Friday</p></div><button class="m-btn m-btn-sm" id="smr">Replay</button></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.getElementById('smr').onclick=function(){var s=document.querySelector('.x-success-mark'),c=s.cloneNode(true);s.parentNode.replaceChild(c,s);};
+
+</script>
+</body>
+</html>

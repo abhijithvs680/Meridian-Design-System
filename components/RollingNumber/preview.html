@@ -1,0 +1,17 @@
+<!-- @dsCard group="Expressive" height=170 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>RollingNumber — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col"><div class="m-stat" style="max-width:280px"><div class="m-stat-label">Collected today</div><div class="m-stat-value"><span>₹</span><span class="x-roll" id="roll" aria-live="polite"></span></div><div class="m-delta up">▲ live <span>updates as payments land</span></div></div><button class="m-btn m-btn-sm" id="bump" style="align-self:flex-start">Simulate a payment</button></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var el=document.getElementById('roll'),val=482190;
+function render(v){var s=v.toLocaleString('en-IN');var cols=el.children;if(cols.length!==s.length){el.innerHTML='';for(var i=0;i<s.length;i++){var ch=s[i];if(/\d/.test(ch)){var c=document.createElement('span');c.className='x-roll-col';var inner=document.createElement('span');for(var d=0;d<10;d++){var x=document.createElement('i');x.textContent=d;inner.appendChild(x);}c.appendChild(inner);el.appendChild(c);}else{var st=document.createElement('span');st.className='x-roll-static';st.textContent=ch;el.appendChild(st);}}}
+for(var j=0;j<s.length;j++){var c2=el.children[j];if(c2.className==='x-roll-col')c2.firstChild.style.setProperty('--n',s[j]);}el.setAttribute('aria-label','₹'+s);}
+render(val);document.getElementById('bump').onclick=function(){val+=Math.round(20000+Math.random()*90000);render(val);};
+
+</script>
+</body>
+</html>

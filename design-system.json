@@ -1,0 +1,627 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Backgrounds": {
+      "name": "Backgrounds",
+      "order": [
+        "fine-grid.svg",
+        "dot-field.svg",
+        "diagonal.svg",
+        "crosshair.svg"
+      ],
+      "files": {
+        "fine-grid.svg": {
+          "name": "fine-grid.svg",
+          "path": "assets/Backgrounds/fine-grid.svg",
+          "size": 338,
+          "type": "image/svg+xml"
+        },
+        "dot-field.svg": {
+          "name": "dot-field.svg",
+          "path": "assets/Backgrounds/dot-field.svg",
+          "size": 331,
+          "type": "image/svg+xml"
+        },
+        "diagonal.svg": {
+          "name": "diagonal.svg",
+          "path": "assets/Backgrounds/diagonal.svg",
+          "size": 351,
+          "type": "image/svg+xml"
+        },
+        "crosshair.svg": {
+          "name": "crosshair.svg",
+          "path": "assets/Backgrounds/crosshair.svg",
+          "size": 333,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Icons": {
+      "name": "Icons",
+      "order": [
+        "grid.svg",
+        "search.svg",
+        "plus.svg",
+        "minus.svg",
+        "check.svg",
+        "close.svg",
+        "arrow-right.svg",
+        "arrow-left.svg",
+        "arrow-up.svg",
+        "arrow-down.svg",
+        "chevron-down.svg",
+        "chevron-right.svg",
+        "play.svg",
+        "pause.svg",
+        "stop.svg",
+        "document.svg",
+        "folder.svg",
+        "mail.svg",
+        "calendar.svg",
+        "clock.svg",
+        "person.svg",
+        "team.svg",
+        "lock.svg",
+        "shield.svg",
+        "chart.svg",
+        "trend.svg",
+        "filter.svg",
+        "download.svg",
+        "upload.svg",
+        "copy.svg",
+        "link.svg",
+        "external.svg",
+        "sparkle.svg",
+        "terminal.svg",
+        "database.svg",
+        "workflow.svg",
+        "code.svg",
+        "eye.svg",
+        "warning.svg",
+        "info.svg",
+        "refresh.svg",
+        "settings.svg",
+        "receipt.svg",
+        "credit-card.svg",
+        "globe.svg",
+        "home.svg",
+        "bell.svg",
+        "book.svg",
+        "layers.svg",
+        "message.svg",
+        "sun.svg",
+        "moon.svg",
+        "image.svg",
+        "target.svg",
+        "archive.svg",
+        "briefcase.svg",
+        "heart.svg",
+        "flag.svg",
+        "key.svg",
+        "cpu.svg"
+      ],
+      "files": {
+        "grid.svg": {
+          "name": "grid.svg",
+          "path": "assets/Icons/grid.svg",
+          "size": 378,
+          "type": "image/svg+xml"
+        },
+        "search.svg": {
+          "name": "search.svg",
+          "path": "assets/Icons/search.svg",
+          "size": 241,
+          "type": "image/svg+xml"
+        },
+        "plus.svg": {
+          "name": "plus.svg",
+          "path": "assets/Icons/plus.svg",
+          "size": 214,
+          "type": "image/svg+xml"
+        },
+        "minus.svg": {
+          "name": "minus.svg",
+          "path": "assets/Icons/minus.svg",
+          "size": 207,
+          "type": "image/svg+xml"
+        },
+        "check.svg": {
+          "name": "check.svg",
+          "path": "assets/Icons/check.svg",
+          "size": 213,
+          "type": "image/svg+xml"
+        },
+        "close.svg": {
+          "name": "close.svg",
+          "path": "assets/Icons/close.svg",
+          "size": 219,
+          "type": "image/svg+xml"
+        },
+        "arrow-right.svg": {
+          "name": "arrow-right.svg",
+          "path": "assets/Icons/arrow-right.svg",
+          "size": 226,
+          "type": "image/svg+xml"
+        },
+        "arrow-left.svg": {
+          "name": "arrow-left.svg",
+          "path": "assets/Icons/arrow-left.svg",
+          "size": 224,
+          "type": "image/svg+xml"
+        },
+        "arrow-up.svg": {
+          "name": "arrow-up.svg",
+          "path": "assets/Icons/arrow-up.svg",
+          "size": 223,
+          "type": "image/svg+xml"
+        },
+        "arrow-down.svg": {
+          "name": "arrow-down.svg",
+          "path": "assets/Icons/arrow-down.svg",
+          "size": 225,
+          "type": "image/svg+xml"
+        },
+        "chevron-down.svg": {
+          "name": "chevron-down.svg",
+          "path": "assets/Icons/chevron-down.svg",
+          "size": 218,
+          "type": "image/svg+xml"
+        },
+        "chevron-right.svg": {
+          "name": "chevron-right.svg",
+          "path": "assets/Icons/chevron-right.svg",
+          "size": 219,
+          "type": "image/svg+xml"
+        },
+        "play.svg": {
+          "name": "play.svg",
+          "path": "assets/Icons/play.svg",
+          "size": 213,
+          "type": "image/svg+xml"
+        },
+        "pause.svg": {
+          "name": "pause.svg",
+          "path": "assets/Icons/pause.svg",
+          "size": 214,
+          "type": "image/svg+xml"
+        },
+        "stop.svg": {
+          "name": "stop.svg",
+          "path": "assets/Icons/stop.svg",
+          "size": 235,
+          "type": "image/svg+xml"
+        },
+        "document.svg": {
+          "name": "document.svg",
+          "path": "assets/Icons/document.svg",
+          "size": 241,
+          "type": "image/svg+xml"
+        },
+        "folder.svg": {
+          "name": "folder.svg",
+          "path": "assets/Icons/folder.svg",
+          "size": 218,
+          "type": "image/svg+xml"
+        },
+        "mail.svg": {
+          "name": "mail.svg",
+          "path": "assets/Icons/mail.svg",
+          "size": 259,
+          "type": "image/svg+xml"
+        },
+        "calendar.svg": {
+          "name": "calendar.svg",
+          "path": "assets/Icons/calendar.svg",
+          "size": 287,
+          "type": "image/svg+xml"
+        },
+        "clock.svg": {
+          "name": "clock.svg",
+          "path": "assets/Icons/clock.svg",
+          "size": 241,
+          "type": "image/svg+xml"
+        },
+        "person.svg": {
+          "name": "person.svg",
+          "path": "assets/Icons/person.svg",
+          "size": 255,
+          "type": "image/svg+xml"
+        },
+        "team.svg": {
+          "name": "team.svg",
+          "path": "assets/Icons/team.svg",
+          "size": 293,
+          "type": "image/svg+xml"
+        },
+        "lock.svg": {
+          "name": "lock.svg",
+          "path": "assets/Icons/lock.svg",
+          "size": 279,
+          "type": "image/svg+xml"
+        },
+        "shield.svg": {
+          "name": "shield.svg",
+          "path": "assets/Icons/shield.svg",
+          "size": 251,
+          "type": "image/svg+xml"
+        },
+        "chart.svg": {
+          "name": "chart.svg",
+          "path": "assets/Icons/chart.svg",
+          "size": 233,
+          "type": "image/svg+xml"
+        },
+        "trend.svg": {
+          "name": "trend.svg",
+          "path": "assets/Icons/trend.svg",
+          "size": 226,
+          "type": "image/svg+xml"
+        },
+        "filter.svg": {
+          "name": "filter.svg",
+          "path": "assets/Icons/filter.svg",
+          "size": 223,
+          "type": "image/svg+xml"
+        },
+        "download.svg": {
+          "name": "download.svg",
+          "path": "assets/Icons/download.svg",
+          "size": 236,
+          "type": "image/svg+xml"
+        },
+        "upload.svg": {
+          "name": "upload.svg",
+          "path": "assets/Icons/upload.svg",
+          "size": 234,
+          "type": "image/svg+xml"
+        },
+        "copy.svg": {
+          "name": "copy.svg",
+          "path": "assets/Icons/copy.svg",
+          "size": 261,
+          "type": "image/svg+xml"
+        },
+        "link.svg": {
+          "name": "link.svg",
+          "path": "assets/Icons/link.svg",
+          "size": 263,
+          "type": "image/svg+xml"
+        },
+        "external.svg": {
+          "name": "external.svg",
+          "path": "assets/Icons/external.svg",
+          "size": 238,
+          "type": "image/svg+xml"
+        },
+        "sparkle.svg": {
+          "name": "sparkle.svg",
+          "path": "assets/Icons/sparkle.svg",
+          "size": 235,
+          "type": "image/svg+xml"
+        },
+        "terminal.svg": {
+          "name": "terminal.svg",
+          "path": "assets/Icons/terminal.svg",
+          "size": 271,
+          "type": "image/svg+xml"
+        },
+        "database.svg": {
+          "name": "database.svg",
+          "path": "assets/Icons/database.svg",
+          "size": 283,
+          "type": "image/svg+xml"
+        },
+        "workflow.svg": {
+          "name": "workflow.svg",
+          "path": "assets/Icons/workflow.svg",
+          "size": 367,
+          "type": "image/svg+xml"
+        },
+        "code.svg": {
+          "name": "code.svg",
+          "path": "assets/Icons/code.svg",
+          "size": 234,
+          "type": "image/svg+xml"
+        },
+        "eye.svg": {
+          "name": "eye.svg",
+          "path": "assets/Icons/eye.svg",
+          "size": 272,
+          "type": "image/svg+xml"
+        },
+        "warning.svg": {
+          "name": "warning.svg",
+          "path": "assets/Icons/warning.svg",
+          "size": 230,
+          "type": "image/svg+xml"
+        },
+        "info.svg": {
+          "name": "info.svg",
+          "path": "assets/Icons/info.svg",
+          "size": 244,
+          "type": "image/svg+xml"
+        },
+        "refresh.svg": {
+          "name": "refresh.svg",
+          "path": "assets/Icons/refresh.svg",
+          "size": 270,
+          "type": "image/svg+xml"
+        },
+        "settings.svg": {
+          "name": "settings.svg",
+          "path": "assets/Icons/settings.svg",
+          "size": 355,
+          "type": "image/svg+xml"
+        },
+        "receipt.svg": {
+          "name": "receipt.svg",
+          "path": "assets/Icons/receipt.svg",
+          "size": 262,
+          "type": "image/svg+xml"
+        },
+        "credit-card.svg": {
+          "name": "credit-card.svg",
+          "path": "assets/Icons/credit-card.svg",
+          "size": 268,
+          "type": "image/svg+xml"
+        },
+        "globe.svg": {
+          "name": "globe.svg",
+          "path": "assets/Icons/globe.svg",
+          "size": 280,
+          "type": "image/svg+xml"
+        },
+        "home.svg": {
+          "name": "home.svg",
+          "path": "assets/Icons/home.svg",
+          "size": 237,
+          "type": "image/svg+xml"
+        },
+        "bell.svg": {
+          "name": "bell.svg",
+          "path": "assets/Icons/bell.svg",
+          "size": 239,
+          "type": "image/svg+xml"
+        },
+        "book.svg": {
+          "name": "book.svg",
+          "path": "assets/Icons/book.svg",
+          "size": 263,
+          "type": "image/svg+xml"
+        },
+        "layers.svg": {
+          "name": "layers.svg",
+          "path": "assets/Icons/layers.svg",
+          "size": 250,
+          "type": "image/svg+xml"
+        },
+        "message.svg": {
+          "name": "message.svg",
+          "path": "assets/Icons/message.svg",
+          "size": 233,
+          "type": "image/svg+xml"
+        },
+        "sun.svg": {
+          "name": "sun.svg",
+          "path": "assets/Icons/sun.svg",
+          "size": 294,
+          "type": "image/svg+xml"
+        },
+        "moon.svg": {
+          "name": "moon.svg",
+          "path": "assets/Icons/moon.svg",
+          "size": 235,
+          "type": "image/svg+xml"
+        },
+        "image.svg": {
+          "name": "image.svg",
+          "path": "assets/Icons/image.svg",
+          "size": 298,
+          "type": "image/svg+xml"
+        },
+        "target.svg": {
+          "name": "target.svg",
+          "path": "assets/Icons/target.svg",
+          "size": 281,
+          "type": "image/svg+xml"
+        },
+        "archive.svg": {
+          "name": "archive.svg",
+          "path": "assets/Icons/archive.svg",
+          "size": 268,
+          "type": "image/svg+xml"
+        },
+        "briefcase.svg": {
+          "name": "briefcase.svg",
+          "path": "assets/Icons/briefcase.svg",
+          "size": 289,
+          "type": "image/svg+xml"
+        },
+        "heart.svg": {
+          "name": "heart.svg",
+          "path": "assets/Icons/heart.svg",
+          "size": 261,
+          "type": "image/svg+xml"
+        },
+        "flag.svg": {
+          "name": "flag.svg",
+          "path": "assets/Icons/flag.svg",
+          "size": 226,
+          "type": "image/svg+xml"
+        },
+        "key.svg": {
+          "name": "key.svg",
+          "path": "assets/Icons/key.svg",
+          "size": 256,
+          "type": "image/svg+xml"
+        },
+        "cpu.svg": {
+          "name": "cpu.svg",
+          "path": "assets/Icons/cpu.svg",
+          "size": 342,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Illustrations": {
+      "name": "Illustrations",
+      "order": [
+        "empty-inbox.svg",
+        "no-results.svg",
+        "access-protected.svg",
+        "connected-workspace.svg",
+        "agent-ready.svg",
+        "all-complete.svg"
+      ],
+      "files": {
+        "empty-inbox.svg": {
+          "name": "empty-inbox.svg",
+          "path": "assets/Illustrations/empty-inbox.svg",
+          "size": 734,
+          "type": "image/svg+xml"
+        },
+        "no-results.svg": {
+          "name": "no-results.svg",
+          "path": "assets/Illustrations/no-results.svg",
+          "size": 713,
+          "type": "image/svg+xml"
+        },
+        "access-protected.svg": {
+          "name": "access-protected.svg",
+          "path": "assets/Illustrations/access-protected.svg",
+          "size": 729,
+          "type": "image/svg+xml"
+        },
+        "connected-workspace.svg": {
+          "name": "connected-workspace.svg",
+          "path": "assets/Illustrations/connected-workspace.svg",
+          "size": 846,
+          "type": "image/svg+xml"
+        },
+        "agent-ready.svg": {
+          "name": "agent-ready.svg",
+          "path": "assets/Illustrations/agent-ready.svg",
+          "size": 707,
+          "type": "image/svg+xml"
+        },
+        "all-complete.svg": {
+          "name": "all-complete.svg",
+          "path": "assets/Illustrations/all-complete.svg",
+          "size": 688,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Logos": {
+      "name": "Logos",
+      "order": [
+        "meridian-mark.svg",
+        "meridian-mark-dark.svg",
+        "meridian-lockup.svg"
+      ],
+      "files": {
+        "meridian-mark.svg": {
+          "name": "meridian-mark.svg",
+          "path": "assets/Logos/meridian-mark.svg",
+          "size": 239,
+          "type": "image/svg+xml"
+        },
+        "meridian-mark-dark.svg": {
+          "name": "meridian-mark-dark.svg",
+          "path": "assets/Logos/meridian-mark-dark.svg",
+          "size": 239,
+          "type": "image/svg+xml"
+        },
+        "meridian-lockup.svg": {
+          "name": "meridian-lockup.svg",
+          "path": "assets/Logos/meridian-lockup.svg",
+          "size": 345,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Marketing": {
+      "name": "Marketing",
+      "order": [
+        "contour-field.svg",
+        "orbital-array.svg",
+        "clay-terraces.svg",
+        "drafting-plates.svg"
+      ],
+      "files": {
+        "contour-field.svg": {
+          "name": "contour-field.svg",
+          "path": "assets/Marketing/contour-field.svg",
+          "size": 30509,
+          "type": "image/svg+xml"
+        },
+        "orbital-array.svg": {
+          "name": "orbital-array.svg",
+          "path": "assets/Marketing/orbital-array.svg",
+          "size": 2394,
+          "type": "image/svg+xml"
+        },
+        "clay-terraces.svg": {
+          "name": "clay-terraces.svg",
+          "path": "assets/Marketing/clay-terraces.svg",
+          "size": 1625,
+          "type": "image/svg+xml"
+        },
+        "drafting-plates.svg": {
+          "name": "drafting-plates.svg",
+          "path": "assets/Marketing/drafting-plates.svg",
+          "size": 2510,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-11-07T04:40:00Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "README.md",
+    "sections": [
+      "01-tokens.md",
+      "02-themes.md",
+      "03-typography-spacing.md",
+      "04-component-architecture.md",
+      "05-responsive.md",
+      "06-accessibility.md",
+      "07-page-patterns.md",
+      "08-agent-ui.md",
+      "09-ai-builder-rules.md",
+      "10-openui.md",
+      "11-governance.md",
+      "12-expressive.md",
+      "13-uiarc-crosswalk.md",
+      "14-localization.md",
+      "DESIGN.md",
+      "docs/premium-expansion.md",
+      "docs/agent-contracts.md",
+      "docs/operations-integration.md",
+      "docs/premium-benchmark.md",
+      "docs/marketing-collection.md",
+      "docs/section-studio.md"
+    ]
+  },
+  "groups": [
+    "Backgrounds",
+    "Icons",
+    "Illustrations",
+    "Logos",
+    "Marketing"
+  ],
+  "lastChange": {
+    "at": "2026-11-09",
+    "note": "2.11.1: contextual composer sizing and neutral agent activity",
+    "via": "Codex"
+  },
+  "layout": "files",
+  "libraries": [],
+  "namespace": "Meridian",
+  "sections": {},
+  "title": "Meridian Design System"
+}

@@ -1,0 +1,17 @@
+<!-- @dsCard group="Expressive" height=250 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>RadialMenu — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center"><div class="x-radial" id="rad"><button class="x-radial-item" style="--a:-90deg;--i:0" aria-label="Edit" tabindex="-1"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button><button class="x-radial-item" style="--a:-18deg;--i:1" aria-label="Send" tabindex="-1"><svg class="m-icon m-icon-dir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z"/></svg></button><button class="x-radial-item" style="--a:54deg;--i:2" aria-label="Attach" tabindex="-1"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg></button><button class="x-radial-item" style="--a:126deg;--i:3" aria-label="Schedule" tabindex="-1"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></button><button class="x-radial-item" style="--a:198deg;--i:4" aria-label="Delete" tabindex="-1"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></button><button class="x-radial-trigger" id="radt" aria-label="Quick actions" aria-expanded="false"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var r=document.getElementById('rad'),t=document.getElementById('radt'),its=r.querySelectorAll('.x-radial-item');
+function set(o){r.classList.toggle('is-open',o);t.setAttribute('aria-expanded',o);its.forEach(function(i){i.tabIndex=o?0:-1;});}
+t.onclick=function(){set(!r.classList.contains('is-open'));};r.onkeydown=function(e){if(e.key==='Escape'){set(false);t.focus();}};
+setTimeout(function(){set(true);},500);
+
+</script>
+</body>
+</html>

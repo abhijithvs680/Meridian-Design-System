@@ -1,0 +1,43 @@
+.marketing-masthead {
+  padding: clamp(22px, 5vw, 66px) 0 26px;
+  border-block: 1px solid var(--border);
+}
+.marketing-masthead > p { font: 11px var(--font-mono); letter-spacing: .12em; color: var(--fg-muted); }
+.marketing-masthead h1 { margin: 16px 0 20px; font-size: clamp(42px, 7.5vw, 104px); letter-spacing: -.065em; }
+.marketing-intro { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--fg-muted); }
+.marketing-intro p { margin: 0; }
+.marketing-intro a, .marketing-launches a { color: var(--primary-text); text-decoration: underline; text-underline-offset: .22em; }
+.marketing-filters { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 20px; }
+.marketing-filters button {
+  min-height: 36px; padding: 6px 12px; font: inherit; font-size: 12px;
+  background: var(--surface); color: var(--fg); border: 1px solid var(--border); border-radius: 4px;
+}
+.marketing-filters button[aria-pressed="true"] { background: var(--fg); color: var(--surface); border-color: var(--fg); }
+.marketing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.marketing-card { display: block; min-width: 0; border: 1px solid var(--border); background: var(--surface); }
+.marketing-card:hover { border-color: var(--primary); }
+.marketing-poster { aspect-ratio: 16 / 9; overflow: hidden; background: var(--surface-sunken); }
+.marketing-poster iframe {
+  width: 820px; height: 462px; max-width: none; border: 0; margin: 0;
+  transform: scale(var(--thumb-scale, .5)); transform-origin: top left;
+  pointer-events: none; transition: none;
+}
+.asset-tile[data-group="Marketing"] img { padding: 0; height: 110px; }
+[dir="rtl"] .marketing-poster iframe { transform-origin: top right; }
+.marketing-caption { display: flex; gap: 10px; align-items: center; padding: 14px; }
+.marketing-index { font: 11px var(--font-mono); color: var(--fg-muted); }
+.marketing-arrow { margin-inline-start: auto; color: var(--primary-text); }
+.marketing-launches {
+  margin-block-start: 36px; border-block-start: 1px solid var(--border);
+  padding-block-start: 20px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.marketing-launches h2 { margin: 4px 0; }
+.marketing-launches > div { margin-inline-end: auto; }
+.launch-composer { margin-block-start: 26px; background: var(--surface); border: 1px solid var(--border); }
+.launch-composer summary { padding: 16px; cursor: pointer; font-weight: 600; }
+.composer-controls { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 16px; }
+.composer-controls label { display: grid; gap: 4px; font-size: 12px; }
+.composer-export { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; padding: 0 16px 12px; }
+.composer-export p { color: var(--fg-muted); font-size: 12px; margin: 0; }
+#composition-frame { border-block-start: 1px solid var(--border); }
+@media (max-width: 660px) { .marketing-grid { grid-template-columns: minmax(0, 1fr); } }

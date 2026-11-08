@@ -1,0 +1,49 @@
+{
+  "name": "meridian-design-system",
+  "version": "2.11.1",
+  "private": true,
+  "description": "Meridian business and agentic UI design system, catalog and portable assets",
+  "exports": {
+    "./run-runtime": {
+      "types": "./operations/runtime.d.mts",
+      "import": "./operations/runtime.mjs"
+    },
+    "./run-inspector": {
+      "types": "./operations/inspector.d.mts",
+      "import": "./operations/inspector.mjs"
+    },
+    "./operations.css": "./operations/operations.css",
+    "./tokens.css": "./tokens.css",
+    "./bundle.css": "./components/bundle.css",
+    "./premium.css": "./components/premium.css",
+    "./expressive.css": "./components/expressive.css",
+    "./marketing.css": "./marketing/marketing.css",
+    "./marketing.js": "./marketing/marketing.js",
+    "./token-handoff.json": "./assets/token-handoff.json",
+    "./composer.css": "./components/composer.css",
+    "./composer.js": "./components/composer.js"
+  },
+  "files": [
+    "operations/runtime.*",
+    "operations/inspector.*",
+    "operations/operations.css",
+    "tokens.css",
+    "components/bundle.css",
+    "components/premium.css",
+    "components/expressive.css",
+    "marketing/marketing.css",
+    "marketing/marketing.js",
+    "assets/Marketing",
+    "assets/token-handoff.json",
+    "docs/operations-integration.md",
+    "components/composer.css",
+    "components/composer.js",
+    "docs/section-studio.md"
+  ],
+  "scripts": {
+    "build": "python scripts/build-catalog.py",
+    "preview": "python -m http.server 8765 --bind 127.0.0.1",
+    "test": "node --test tests/*.test.mjs && python scripts/validate.py",
+    "package": "python scripts/package-release.py"
+  }
+}

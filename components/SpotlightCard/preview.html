@@ -1,0 +1,14 @@
+<!-- @dsCard group="Expressive" height=220 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SpotlightCard — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage"><div class="m-grid-2" style="width:100%"><a class="x-spot" href="#" style="text-decoration:none;color:inherit;display:block"><div class="m-badge m-badge-agent plain" style="margin-bottom:12px">Agent</div><h3 class="m-card-title">Billing agent</h3><p class="m-card-desc">Reconciles invoices and drafts reminders. 214 runs this week.</p></a><a class="x-spot" href="#" style="text-decoration:none;color:inherit;display:block"><div class="m-badge m-badge-info plain" style="margin-bottom:12px">Template</div><h3 class="m-card-title">Collections dashboard</h3><p class="m-card-desc">KPI row, insights, charts and a needs-attention table.</p></a></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.querySelectorAll('.x-spot').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px');});});
+
+</script>
+</body>
+</html>

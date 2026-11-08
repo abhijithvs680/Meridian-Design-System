@@ -1,0 +1,1259 @@
+{
+  "version": "2.11.1",
+  "tokens": [
+    {
+      "name": "--bg",
+      "description": "App canvas behind every page. Never put body text directly on it in dense areas; use surface.",
+      "light": "#f6f6f4",
+      "dark": "#0e1014"
+    },
+    {
+      "name": "--surface",
+      "description": "Cards, tables, panels, sidebar. The default container for content.",
+      "light": "#ffffff",
+      "dark": "#16191f"
+    },
+    {
+      "name": "--surface-sunken",
+      "description": "Wells inside a surface: code blocks, tool-call output, table header row, input groups.",
+      "light": "#efefec",
+      "dark": "#121419"
+    },
+    {
+      "name": "--surface-hover",
+      "description": "Hover state for rows, nav items and ghost buttons.",
+      "light": "#f2f2ef",
+      "dark": "#1d2129"
+    },
+    {
+      "name": "--border",
+      "description": "Default 1px hairline for cards, inputs, table rows. Borders, not shadows, separate in-flow content.",
+      "light": "#e2e2de",
+      "dark": "#2a2e37"
+    },
+    {
+      "name": "--border-strong",
+      "description": "Input and control borders (3:1 against surface), emphasized dividers.",
+      "light": "#8f9097",
+      "dark": "#6a707c"
+    },
+    {
+      "name": "--fg",
+      "description": "Primary text and icons on bg, surface and surface-sunken.",
+      "light": "#18181b",
+      "dark": "#ececef"
+    },
+    {
+      "name": "--fg-muted",
+      "description": "Secondary text: descriptions, table metadata, labels. Legible on bg, surface, surface-sunken.",
+      "light": "#55575e",
+      "dark": "#a3a6ae"
+    },
+    {
+      "name": "--fg-subtle",
+      "description": "Placeholders, timestamps, captions. 4.5:1 on surface in both themes; avoid on surface-sunken for long text.",
+      "light": "#6b6d74",
+      "dark": "#878b94"
+    },
+    {
+      "name": "--primary",
+      "description": "The one primary action per view, links, selected nav, focus. Pair text on it with on-primary.",
+      "light": "#2450d6",
+      "dark": "#7090ff"
+    },
+    {
+      "name": "--primary-hover",
+      "description": "Hover/pressed state of primary fills.",
+      "light": "#1c41b3",
+      "dark": "#8ca6ff"
+    },
+    {
+      "name": "--on-primary",
+      "description": "Text and icons on a primary fill.",
+      "light": "#ffffff",
+      "dark": "#0b1020"
+    },
+    {
+      "name": "--primary-soft",
+      "description": "Selected rows, active nav item background, info banners.",
+      "light": "#e9eefc",
+      "dark": "#1a2340"
+    },
+    {
+      "name": "--primary-text",
+      "description": "Text on primary-soft; link text on surface.",
+      "light": "#1c3fae",
+      "dark": "#aabdff"
+    },
+    {
+      "name": "--agent",
+      "description": "Agent identity and progress. Pair with a descriptive label or icon.",
+      "light": "#3d4654",
+      "dark": "#bec8d6"
+    },
+    {
+      "name": "--on-agent",
+      "description": "Text and icons on an agent fill.",
+      "light": "#ffffff",
+      "dark": "#202832"
+    },
+    {
+      "name": "--agent-soft",
+      "description": "Background of agent messages, insight cards and suggestion chips.",
+      "light": "#eef0f3",
+      "dark": "#242931"
+    },
+    {
+      "name": "--agent-text",
+      "description": "Text on agent-soft.",
+      "light": "#384454",
+      "dark": "#d6dee9"
+    },
+    {
+      "name": "--success",
+      "description": "Completed steps, positive deltas, healthy status dots.",
+      "light": "#15803d",
+      "dark": "#4ade80"
+    },
+    {
+      "name": "--success-soft",
+      "description": "Success badge and banner background.",
+      "light": "#e6f5eb",
+      "dark": "#0f2a1a"
+    },
+    {
+      "name": "--success-text",
+      "description": "Text on success-soft; positive delta text on surface.",
+      "light": "#166534",
+      "dark": "#86efac"
+    },
+    {
+      "name": "--warning",
+      "description": "Needs attention: pending approval, low confidence, nearing a limit.",
+      "light": "#b45309",
+      "dark": "#fbbf24"
+    },
+    {
+      "name": "--warning-soft",
+      "description": "Warning badge, approval card header, banner background.",
+      "light": "#fdf2dc",
+      "dark": "#33260b"
+    },
+    {
+      "name": "--warning-text",
+      "description": "Text on warning-soft.",
+      "light": "#8a3c0b",
+      "dark": "#fcd34d"
+    },
+    {
+      "name": "--danger",
+      "description": "Destructive actions, failed runs, errors, negative deltas.",
+      "light": "#c42727",
+      "dark": "#f87171"
+    },
+    {
+      "name": "--on-danger",
+      "description": "Text on a danger fill.",
+      "light": "#ffffff",
+      "dark": "#2a0808"
+    },
+    {
+      "name": "--danger-soft",
+      "description": "Error banner and failed badge background.",
+      "light": "#fdeaea",
+      "dark": "#3a1414"
+    },
+    {
+      "name": "--danger-text",
+      "description": "Text on danger-soft; negative delta text on surface.",
+      "light": "#9f1c1c",
+      "dark": "#fca5a5"
+    },
+    {
+      "name": "--focus",
+      "description": "2px keyboard focus ring with a 2px offset in the page color.",
+      "light": "#2450d6",
+      "dark": "#8ca6ff"
+    },
+    {
+      "name": "--chart-1",
+      "description": "First series. Charts use chart-1..6 in order; never status colors for categories.",
+      "light": "#2450d6",
+      "dark": "#7090ff"
+    },
+    {
+      "name": "--chart-2",
+      "description": "Second series.",
+      "light": "#0f8f73",
+      "dark": "#34d3a8"
+    },
+    {
+      "name": "--chart-3",
+      "description": "Third series.",
+      "light": "#e08a00",
+      "dark": "#fbbf4a"
+    },
+    {
+      "name": "--chart-4",
+      "description": "Fourth series.",
+      "light": "#8b5cf6",
+      "dark": "#b69cff"
+    },
+    {
+      "name": "--chart-5",
+      "description": "Fifth series.",
+      "light": "#d9466a",
+      "dark": "#ff8aa6"
+    },
+    {
+      "name": "--chart-6",
+      "description": "Sixth series, or 'Other'.",
+      "light": "#64748b",
+      "dark": "#9aa7ba"
+    },
+    {
+      "name": "--overlay",
+      "description": "Scrim behind dialogs and drawers.",
+      "light": "rgba(16, 18, 24, 0.45)",
+      "dark": "rgba(0, 0, 0, 0.6)"
+    },
+    {
+      "name": "--shadow-overlay",
+      "description": "Only floating layers: menus, popovers, dialogs, toasts. In-flow cards use border, not shadow.",
+      "light": "0 8px 24px rgba(16, 18, 24, 0.12), 0 2px 6px rgba(16, 18, 24, 0.08)",
+      "dark": "0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "--space-1",
+      "description": "Icon-to-label gap, badge padding.",
+      "light": "4px"
+    },
+    {
+      "name": "--space-2",
+      "description": "Gap between related controls; compact cell padding.",
+      "light": "8px"
+    },
+    {
+      "name": "--space-3",
+      "description": "Table cell horizontal padding; field label to input.",
+      "light": "12px"
+    },
+    {
+      "name": "--space-4",
+      "description": "Card padding (compact), gap between form fields.",
+      "light": "16px"
+    },
+    {
+      "name": "--space-5",
+      "description": "Card padding (default).",
+      "light": "20px"
+    },
+    {
+      "name": "--space-6",
+      "description": "Gap between cards in a grid; page gutter on desktop.",
+      "light": "24px"
+    },
+    {
+      "name": "--space-8",
+      "description": "Gap between page sections.",
+      "light": "32px"
+    },
+    {
+      "name": "--space-12",
+      "description": "Empty-state vertical padding.",
+      "light": "48px"
+    },
+    {
+      "name": "--radius-sm",
+      "description": "Badges, checkboxes, chips inside tables.",
+      "light": "4px"
+    },
+    {
+      "name": "--radius-md",
+      "description": "Buttons, inputs, menus.",
+      "light": "6px"
+    },
+    {
+      "name": "--radius-lg",
+      "description": "Cards, panels, dialogs, message bubbles.",
+      "light": "10px"
+    },
+    {
+      "name": "--radius-pill",
+      "description": "Status dots, avatar, suggestion chips.",
+      "light": "999px"
+    },
+    {
+      "name": "--control-sm",
+      "description": "Small buttons and inputs inside tables and toolbars.",
+      "light": "28px"
+    },
+    {
+      "name": "--control-md",
+      "description": "Default button and input height.",
+      "light": "34px"
+    },
+    {
+      "name": "--control-lg",
+      "description": "Primary form submit on sparse pages.",
+      "light": "40px"
+    },
+    {
+      "name": "--row-height",
+      "description": "Default data-table row height; 36px in compact density.",
+      "light": "44px"
+    },
+    {
+      "name": "--sidebar-width",
+      "description": "App sidebar width; collapses to 56px icons.",
+      "light": "240px"
+    },
+    {
+      "name": "--topbar-height",
+      "description": "Top app bar height.",
+      "light": "52px"
+    },
+    {
+      "name": "--agent-panel-width",
+      "description": "Docked agent chat panel on the right of a page.",
+      "light": "400px"
+    },
+    {
+      "name": "--font-sans",
+      "description": "",
+      "light": "\"Inter\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    },
+    {
+      "name": "--font-mono",
+      "description": "",
+      "light": "\"JetBrains Mono\", ui-monospace, \"SFMono-Regular\", Menlo, monospace"
+    },
+    {
+      "name": "--text-text-display",
+      "description": "One per page at most: dashboard or report title.",
+      "light": "600 28px/36px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-title",
+      "description": "Page header title.",
+      "light": "600 20px/28px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-heading",
+      "description": "Card and section headings.",
+      "light": "600 16px/24px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-body",
+      "description": "Default UI text: forms, tables, messages.",
+      "light": "400 14px/20px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-body-strong",
+      "description": "Labels, button text, emphasized cells.",
+      "light": "500 14px/20px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-small",
+      "description": "Descriptions, helper text, secondary table text.",
+      "light": "400 13px/18px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-caption",
+      "description": "Badges, column headers, axis labels. Never for paragraphs.",
+      "light": "500 12px/16px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-metric",
+      "description": "KPI numbers on stat cards. Use tabular numerals.",
+      "light": "600 28px/32px var(--font-sans)"
+    },
+    {
+      "name": "--text-text-mono",
+      "description": "IDs, tool-call arguments, logs, code.",
+      "light": "400 12.5px/20px var(--font-mono)"
+    },
+    {
+      "name": "--gray-0",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#ffffff"
+    },
+    {
+      "name": "--gray-25",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#fcfbf7"
+    },
+    {
+      "name": "--gray-50",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#f7f6f3"
+    },
+    {
+      "name": "--gray-100",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#efeeea"
+    },
+    {
+      "name": "--gray-200",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#e0e0dc"
+    },
+    {
+      "name": "--gray-300",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#cbcac7"
+    },
+    {
+      "name": "--gray-400",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#a8a8a4"
+    },
+    {
+      "name": "--gray-500",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#81807d"
+    },
+    {
+      "name": "--gray-600",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#6c6c69"
+    },
+    {
+      "name": "--gray-700",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#5b5b58"
+    },
+    {
+      "name": "--gray-800",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#464542"
+    },
+    {
+      "name": "--gray-900",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#31302e"
+    },
+    {
+      "name": "--gray-925",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#272624"
+    },
+    {
+      "name": "--gray-950",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#1f1e1c"
+    },
+    {
+      "name": "--gray-975",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#181715"
+    },
+    {
+      "name": "--gray-990",
+      "description": "Primitive neutral. Reference through semantic tokens, never directly in components.",
+      "light": "#12120f"
+    },
+    {
+      "name": "--blue-50",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#f3f7fe"
+    },
+    {
+      "name": "--blue-100",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#e3edff"
+    },
+    {
+      "name": "--blue-200",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#c8dcff"
+    },
+    {
+      "name": "--blue-300",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#a3c3fe"
+    },
+    {
+      "name": "--blue-400",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#71a3ff"
+    },
+    {
+      "name": "--blue-500",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#4985f7"
+    },
+    {
+      "name": "--blue-600",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#2e6ae1"
+    },
+    {
+      "name": "--blue-700",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#2356ba"
+    },
+    {
+      "name": "--blue-800",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#194395"
+    },
+    {
+      "name": "--blue-900",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#0f3174"
+    },
+    {
+      "name": "--blue-950",
+      "description": "Primitive blue. Reference through semantic tokens.",
+      "light": "#072154"
+    },
+    {
+      "name": "--violet-50",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#f7f5fe"
+    },
+    {
+      "name": "--violet-100",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#edeaff"
+    },
+    {
+      "name": "--violet-200",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#dcd4ff"
+    },
+    {
+      "name": "--violet-300",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#c5b6ff"
+    },
+    {
+      "name": "--violet-400",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#aa8eff"
+    },
+    {
+      "name": "--violet-500",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#936bf7"
+    },
+    {
+      "name": "--violet-600",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#7d4de0"
+    },
+    {
+      "name": "--violet-700",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#663eba"
+    },
+    {
+      "name": "--violet-800",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#502e95"
+    },
+    {
+      "name": "--violet-900",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#3c2173"
+    },
+    {
+      "name": "--violet-950",
+      "description": "Primitive violet. Reference through semantic tokens.",
+      "light": "#2a1454"
+    },
+    {
+      "name": "--green-50",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#eafded"
+    },
+    {
+      "name": "--green-100",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#d6f7db"
+    },
+    {
+      "name": "--green-200",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#b5eabf"
+    },
+    {
+      "name": "--green-300",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#93d5a0"
+    },
+    {
+      "name": "--green-400",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#66ba7a"
+    },
+    {
+      "name": "--green-500",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#38a259"
+    },
+    {
+      "name": "--green-600",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#048a3f"
+    },
+    {
+      "name": "--green-700",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#057132"
+    },
+    {
+      "name": "--green-800",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#015925"
+    },
+    {
+      "name": "--green-900",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#01431b"
+    },
+    {
+      "name": "--green-950",
+      "description": "Primitive green. Reference through semantic tokens.",
+      "light": "#012e11"
+    },
+    {
+      "name": "--amber-50",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#fff5eb"
+    },
+    {
+      "name": "--amber-100",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#ffe9d2"
+    },
+    {
+      "name": "--amber-200",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#ffd2a2"
+    },
+    {
+      "name": "--amber-300",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#f0b675"
+    },
+    {
+      "name": "--amber-400",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#da933c"
+    },
+    {
+      "name": "--amber-500",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#c17801"
+    },
+    {
+      "name": "--amber-600",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#a16302"
+    },
+    {
+      "name": "--amber-700",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#845001"
+    },
+    {
+      "name": "--amber-800",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#683e01"
+    },
+    {
+      "name": "--amber-900",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#4f2e00"
+    },
+    {
+      "name": "--amber-950",
+      "description": "Primitive amber. Reference through semantic tokens.",
+      "light": "#371f00"
+    },
+    {
+      "name": "--red-50",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#fff4f3"
+    },
+    {
+      "name": "--red-100",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#fee7e4"
+    },
+    {
+      "name": "--red-200",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#ffcdc8"
+    },
+    {
+      "name": "--red-300",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#fea8a1"
+    },
+    {
+      "name": "--red-400",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#f67972"
+    },
+    {
+      "name": "--red-500",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#e4524f"
+    },
+    {
+      "name": "--red-600",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#cb2f33"
+    },
+    {
+      "name": "--red-700",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#a82428"
+    },
+    {
+      "name": "--red-800",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#86191c"
+    },
+    {
+      "name": "--red-900",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#670e12"
+    },
+    {
+      "name": "--red-950",
+      "description": "Primitive red. Reference through semantic tokens.",
+      "light": "#4b0509"
+    },
+    {
+      "name": "--teal-50",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#e6fcf9"
+    },
+    {
+      "name": "--teal-100",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#cff7f0"
+    },
+    {
+      "name": "--teal-200",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#aae9e0"
+    },
+    {
+      "name": "--teal-300",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#83d4c9"
+    },
+    {
+      "name": "--teal-400",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#4cb9ad"
+    },
+    {
+      "name": "--teal-500",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#0aa093"
+    },
+    {
+      "name": "--teal-600",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#05857a"
+    },
+    {
+      "name": "--teal-700",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#066d64"
+    },
+    {
+      "name": "--teal-800",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#05554e"
+    },
+    {
+      "name": "--teal-900",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#00403b"
+    },
+    {
+      "name": "--teal-950",
+      "description": "Primitive teal. Reference through semantic tokens.",
+      "light": "#002c28"
+    },
+    {
+      "name": "--rose-50",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#fff4f5"
+    },
+    {
+      "name": "--rose-100",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#fee6e9"
+    },
+    {
+      "name": "--rose-200",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#ffcbd3"
+    },
+    {
+      "name": "--rose-300",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#fea5b5"
+    },
+    {
+      "name": "--rose-400",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#f07a93"
+    },
+    {
+      "name": "--rose-500",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#dd5476"
+    },
+    {
+      "name": "--rose-600",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#c4335e"
+    },
+    {
+      "name": "--rose-700",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#a2274c"
+    },
+    {
+      "name": "--rose-800",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#811c3b"
+    },
+    {
+      "name": "--rose-900",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#64112b"
+    },
+    {
+      "name": "--rose-950",
+      "description": "Primitive rose. Reference through semantic tokens.",
+      "light": "#48081c"
+    },
+    {
+      "name": "--surface-pressed",
+      "description": "Pressed (active) state for rows, ghost and secondary buttons.",
+      "light": "var(--gray-100)",
+      "dark": "var(--gray-925)"
+    },
+    {
+      "name": "--fg-disabled",
+      "description": "Disabled labels only (exempt from contrast; never for information).",
+      "light": "var(--gray-400)",
+      "dark": "var(--gray-700)"
+    },
+    {
+      "name": "--primary-pressed",
+      "description": "Pressed (active) state of primary fills.",
+      "light": "var(--blue-800)",
+      "dark": "var(--blue-200)"
+    },
+    {
+      "name": "--agent-hover",
+      "description": "Hover of agent fills.",
+      "light": "#283140",
+      "dark": "#d6dce5"
+    },
+    {
+      "name": "--agent-soft-hover",
+      "description": "Hover of agent-soft fills (agent button, chips).",
+      "light": "#e4e8ed",
+      "dark": "#2f3742"
+    },
+    {
+      "name": "--danger-hover",
+      "description": "Hover of danger fills.",
+      "light": "var(--red-700)",
+      "dark": "var(--red-300)"
+    },
+    {
+      "name": "--button-primary-bg",
+      "description": "Component token. Primary button fill.",
+      "light": "var(--primary)"
+    },
+    {
+      "name": "--button-primary-bg-hover",
+      "description": "Component token. Primary button hover.",
+      "light": "var(--primary-hover)"
+    },
+    {
+      "name": "--button-primary-bg-pressed",
+      "description": "Component token. Primary button pressed.",
+      "light": "var(--primary-pressed)"
+    },
+    {
+      "name": "--button-primary-fg",
+      "description": "Component token. Primary button label.",
+      "light": "var(--on-primary)"
+    },
+    {
+      "name": "--button-secondary-bg",
+      "description": "Component token. Secondary button fill.",
+      "light": "var(--surface)"
+    },
+    {
+      "name": "--button-secondary-bg-hover",
+      "description": "Component token. Secondary hover.",
+      "light": "var(--surface-hover)"
+    },
+    {
+      "name": "--button-secondary-bg-pressed",
+      "description": "Component token. Secondary pressed.",
+      "light": "var(--surface-pressed)"
+    },
+    {
+      "name": "--button-secondary-border",
+      "description": "Component token. Secondary border.",
+      "light": "var(--border-strong)"
+    },
+    {
+      "name": "--button-secondary-fg",
+      "description": "Component token. Secondary label.",
+      "light": "var(--fg)"
+    },
+    {
+      "name": "--button-agent-bg",
+      "description": "Component token. Agent button fill (soft, so it never competes with the one primary).",
+      "light": "var(--agent-soft)"
+    },
+    {
+      "name": "--button-agent-bg-hover",
+      "description": "Component token. Agent button hover.",
+      "light": "var(--agent-soft-hover)"
+    },
+    {
+      "name": "--button-agent-fg",
+      "description": "Component token. Agent button label.",
+      "light": "var(--agent-text)"
+    },
+    {
+      "name": "--button-agent-solid-bg",
+      "description": "Component token. Solid agent button: only the composer Send button.",
+      "light": "var(--agent)"
+    },
+    {
+      "name": "--button-agent-solid-bg-hover",
+      "description": "Component token. Solid agent button hover.",
+      "light": "var(--agent-hover)"
+    },
+    {
+      "name": "--button-agent-solid-fg",
+      "description": "Component token. Solid agent button label.",
+      "light": "var(--on-agent)"
+    },
+    {
+      "name": "--button-danger-bg",
+      "description": "Component token. Danger button fill.",
+      "light": "var(--danger)"
+    },
+    {
+      "name": "--button-danger-bg-hover",
+      "description": "Component token. Danger hover.",
+      "light": "var(--danger-hover)"
+    },
+    {
+      "name": "--button-danger-fg",
+      "description": "Component token. Danger label.",
+      "light": "var(--on-danger)"
+    },
+    {
+      "name": "--input-bg",
+      "description": "Component token. Input, select, textarea fill.",
+      "light": "var(--surface)"
+    },
+    {
+      "name": "--input-border",
+      "description": "Component token. Input border at rest.",
+      "light": "var(--border-strong)"
+    },
+    {
+      "name": "--input-border-hover",
+      "description": "Component token. Input border on hover.",
+      "light": "var(--fg-subtle)"
+    },
+    {
+      "name": "--input-border-focus",
+      "description": "Component token. Input border when focused.",
+      "light": "var(--primary)"
+    },
+    {
+      "name": "--input-border-error",
+      "description": "Component token. Input border when invalid.",
+      "light": "var(--danger)"
+    },
+    {
+      "name": "--input-fg",
+      "description": "Component token. Input text.",
+      "light": "var(--fg)"
+    },
+    {
+      "name": "--input-placeholder",
+      "description": "Component token. Placeholder text.",
+      "light": "var(--fg-subtle)"
+    },
+    {
+      "name": "--input-bg-disabled",
+      "description": "Component token. Disabled and read-only fill.",
+      "light": "var(--surface-sunken)"
+    },
+    {
+      "name": "--control-checked-bg",
+      "description": "Component token. Checked checkbox, radio, switch.",
+      "light": "var(--primary)"
+    },
+    {
+      "name": "--control-checked-fg",
+      "description": "Component token. Check mark on a checked control.",
+      "light": "var(--on-primary)"
+    },
+    {
+      "name": "--card-bg",
+      "description": "Component token. Card fill.",
+      "light": "var(--surface)"
+    },
+    {
+      "name": "--card-border",
+      "description": "Component token. Card border.",
+      "light": "var(--border)"
+    },
+    {
+      "name": "--table-header-bg",
+      "description": "Component token. Table header row.",
+      "light": "var(--surface-sunken)"
+    },
+    {
+      "name": "--table-row-hover",
+      "description": "Component token. Row hover.",
+      "light": "var(--surface-hover)"
+    },
+    {
+      "name": "--table-row-selected",
+      "description": "Component token. Selected row.",
+      "light": "var(--primary-soft)"
+    },
+    {
+      "name": "--table-border",
+      "description": "Component token. Row dividers.",
+      "light": "var(--border)"
+    },
+    {
+      "name": "--nav-item-fg",
+      "description": "Component token. Sidebar item at rest.",
+      "light": "var(--fg-muted)"
+    },
+    {
+      "name": "--nav-item-active-bg",
+      "description": "Component token. Current sidebar item fill.",
+      "light": "var(--primary-soft)"
+    },
+    {
+      "name": "--nav-item-active-fg",
+      "description": "Component token. Current sidebar item label.",
+      "light": "var(--primary-text)"
+    },
+    {
+      "name": "--tab-indicator",
+      "description": "Component token. Selected tab underline.",
+      "light": "var(--primary)"
+    },
+    {
+      "name": "--agent-avatar-bg",
+      "description": "Component token. Agent avatar.",
+      "light": "var(--agent)"
+    },
+    {
+      "name": "--agent-message-user-bg",
+      "description": "Component token. User turn bubble.",
+      "light": "var(--surface-sunken)"
+    },
+    {
+      "name": "--agent-chip-bg",
+      "description": "Component token. Suggestion chip.",
+      "light": "var(--agent-soft)"
+    },
+    {
+      "name": "--agent-chip-fg",
+      "description": "Component token. Suggestion chip label.",
+      "light": "var(--agent-text)"
+    },
+    {
+      "name": "--approval-header-bg",
+      "description": "Component token. Approval card header.",
+      "light": "var(--warning-soft)"
+    },
+    {
+      "name": "--approval-header-fg",
+      "description": "Component token. Approval card header text.",
+      "light": "var(--warning-text)"
+    },
+    {
+      "name": "--insight-label-fg",
+      "description": "Component token. Insight label.",
+      "light": "var(--agent-text)"
+    },
+    {
+      "name": "--tooltip-bg",
+      "description": "Component token. Tooltip fill (inverted).",
+      "light": "var(--fg)"
+    },
+    {
+      "name": "--tooltip-fg",
+      "description": "Component token. Tooltip text.",
+      "light": "var(--surface)"
+    },
+    {
+      "name": "--overlay-bg",
+      "description": "Component token. Dialog and drawer scrim.",
+      "light": "var(--overlay)"
+    },
+    {
+      "name": "--popover-bg",
+      "description": "Component token. Menus, popovers, dialogs.",
+      "light": "var(--surface)"
+    },
+    {
+      "name": "--focus-ring",
+      "description": "Component token. Focus outline on every interactive element.",
+      "light": "var(--focus)"
+    },
+    {
+      "name": "--terminal-bg",
+      "description": "Component token (Expressive). Terminal background. Theme-independent: the terminal is always dark.",
+      "light": "var(--gray-990)"
+    },
+    {
+      "name": "--terminal-fg",
+      "description": "Component token (Expressive). Terminal text.",
+      "light": "var(--gray-50)"
+    },
+    {
+      "name": "--terminal-border",
+      "description": "Component token (Expressive). Terminal border and header divider.",
+      "light": "var(--gray-925)"
+    },
+    {
+      "name": "--terminal-muted",
+      "description": "Component token (Expressive). Timestamps and secondary terminal text (4.5:1 on terminal-bg).",
+      "light": "var(--gray-400)"
+    },
+    {
+      "name": "--terminal-ok",
+      "description": "Component token (Expressive). Success lines in the terminal.",
+      "light": "var(--green-300)"
+    },
+    {
+      "name": "--terminal-warn",
+      "description": "Component token (Expressive). Warning lines in the terminal.",
+      "light": "var(--amber-300)"
+    },
+    {
+      "name": "--terminal-agent",
+      "description": "Component token (Expressive). Agent lines and the live dot in the terminal.",
+      "light": "var(--violet-300)"
+    },
+    {
+      "name": "--space-0",
+      "description": "Reset.",
+      "light": "0px"
+    },
+    {
+      "name": "--space-1-5",
+      "description": "Label to input gap; badge dot gap.",
+      "light": "6px"
+    },
+    {
+      "name": "--space-10",
+      "description": "Large section padding on dashboards.",
+      "light": "40px"
+    },
+    {
+      "name": "--space-16",
+      "description": "Page top padding on sparse marketing-style pages only.",
+      "light": "64px"
+    },
+    {
+      "name": "--shadow-raised",
+      "description": "Only for draggable cards and sticky footers lifting off content.",
+      "light": "0 1px 2px rgba(16, 18, 24, 0.06)",
+      "dark": "0 1px 2px rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "name": "--bp-sm",
+      "description": "Large phones, landscape. Forms go two-column above this only if fields are short.",
+      "light": "640px"
+    },
+    {
+      "name": "--bp-md",
+      "description": "Tablets. Sidebar drawer becomes an icon rail.",
+      "light": "768px"
+    },
+    {
+      "name": "--bp-lg",
+      "description": "Laptops. Full sidebar; 2-column card grids.",
+      "light": "1024px"
+    },
+    {
+      "name": "--bp-xl",
+      "description": "Desktops. Agent panel docks instead of overlaying; 4-up KPI row.",
+      "light": "1280px"
+    },
+    {
+      "name": "--bp-2xl",
+      "description": "Wide screens. Content caps at 1440px and centers.",
+      "light": "1536px"
+    },
+    {
+      "name": "--z-sticky",
+      "description": "Sticky table headers, sticky form footers.",
+      "light": "10"
+    },
+    {
+      "name": "--z-nav",
+      "description": "Sidebar and top bar.",
+      "light": "20"
+    },
+    {
+      "name": "--z-drawer",
+      "description": "Drawers and the overlaid agent panel.",
+      "light": "30"
+    },
+    {
+      "name": "--z-dialog",
+      "description": "Dialogs and their scrim.",
+      "light": "40"
+    },
+    {
+      "name": "--z-popover",
+      "description": "Menus, selects, tooltips (above dialogs).",
+      "light": "50"
+    },
+    {
+      "name": "--z-toast",
+      "description": "Toasts, always on top.",
+      "light": "60"
+    },
+    {
+      "name": "--duration-fast",
+      "description": "Hover and pressed color changes.",
+      "light": "120ms"
+    },
+    {
+      "name": "--duration-base",
+      "description": "Menus, tooltips, switches.",
+      "light": "200ms"
+    },
+    {
+      "name": "--duration-slow",
+      "description": "Drawers and dialogs entering.",
+      "light": "280ms"
+    }
+  ]
+}

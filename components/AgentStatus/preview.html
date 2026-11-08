@@ -1,0 +1,20 @@
+<!-- @dsCard group="Agent" height=220 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AgentStatus — preview</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col">
+  <div class="m-row">
+    <span class="m-state-label">In progress</span>
+    <span class="m-agent-status"><span class="m-activity-spinner" aria-hidden="true"></span>Reviewing invoices</span>
+    <span class="m-agent-status"><progress class="m-activity-meter" value="3" max="5" aria-hidden="true"></progress>Running · step 3 of 5</span>
+  </div>
+  <div class="m-row">
+    <span class="m-state-label">Run states</span>
+    <span class="m-agent-status is-idle"><span class="m-status-dot is-idle" aria-hidden="true"></span>Idle</span>
+    <span class="m-agent-status is-waiting"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l9 16H3zM12 10v4m0 3v.01"/></svg>Needs approval</span>
+    <span class="m-agent-status is-error"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Failed</span>
+  </div>
+</div>
+</body>
+</html>

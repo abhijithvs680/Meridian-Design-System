@@ -1,0 +1,16 @@
+<!-- @dsCard group="Expressive" height=170 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Dock — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage" style="justify-content:center;min-height:130px;align-items:flex-end"><nav class="x-dock" id="dock" aria-label="Apps"><button class="x-dock-item" data-label="Overview" aria-label="Overview"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"/></svg></button><button class="x-dock-item" data-label="Invoices" aria-label="Invoices" aria-current="page"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6H3z"/><path d="M3 13h5l1 2h6l1-2h5"/></svg></button><button class="x-dock-item" data-label="Customers" aria-label="Customers"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c.6-3.4 3-5.5 6-5.5s5.4 2.1 6 5.5"/></svg></button><button class="x-dock-item" data-label="Reports" aria-label="Reports"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg></button><span class="x-dock-sep" aria-hidden="true"></span><button class="x-dock-item is-agent" data-label="Ask agent" aria-label="Ask agent"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.4 13.8 11.2 12 16l-1.8-4.8L5.5 9.4l4.7-1.8z"/></svg></button><button class="x-dock-item" data-label="Settings" aria-label="Settings"><svg class="m-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3"/></svg></button></nav></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var d=document.getElementById('dock'),items=[].slice.call(d.querySelectorAll('.x-dock-item'));
+if(!RM){d.addEventListener('mousemove',function(e){items.forEach(function(it){var r=it.getBoundingClientRect(),c=r.left+r.width/2,dist=Math.abs(e.clientX-c);var s=Math.max(1,1.55-dist/140);it.style.setProperty('--s',s.toFixed(3));});});
+d.addEventListener('mouseleave',function(){items.forEach(function(it){it.style.setProperty('--s',1);});});}
+
+</script>
+</body>
+</html>

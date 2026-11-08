@@ -1,0 +1,24 @@
+<!-- @dsCard group="Expressive" height=260 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>DataFlow — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col"><div class="x-flow"><svg viewBox="0 0 640 180" role="img" aria-label="Data flow: Accounting and bank feed into warehouse, warehouse into billing agent, agent writes to CRM after approval. Bank feed is down.">
+<path id="e1" class="edge is-live" d="M150 45 C 230 45, 230 90, 290 90"/><path id="e2" class="edge" d="M150 135 C 230 135, 230 90, 290 90"/><path id="e3" class="edge is-live" d="M400 90 L 460 90"/><path id="e4" class="edge is-live" d="M570 90 C 600 90, 600 150, 560 155"/>
+<g class="node"><rect x="20" y="22" width="130" height="46" rx="8"/><text x="36" y="42">Accounting</text><text class="sub" x="36" y="58">142 invoices / h</text></g>
+<g class="node is-down"><rect x="20" y="112" width="130" height="46" rx="8"/><text x="36" y="132">Bank feed</text><text class="sub" x="36" y="148" style="fill:var(--danger-text)">down · retrying</text></g>
+<g class="node"><rect x="290" y="67" width="110" height="46" rx="8"/><text x="306" y="87">Warehouse</text><text class="sub" x="306" y="103">fresh 2 min</text></g>
+<g class="node is-agent"><rect x="460" y="67" width="110" height="46" rx="8"/><text x="476" y="87">Billing agent</text><text class="sub" x="476" y="103">running</text></g>
+<g class="node"><rect x="430" y="135" width="130" height="40" rx="8"/><text x="446" y="160">CRM (approved)</text></g>
+<circle class="packet" r="4" data-e="e1"/><circle class="packet" r="4" data-e="e1" data-o=".5"/><circle class="packet" r="4" data-e="e3"/><circle class="packet is-agent" r="4" data-e="e4"/>
+</svg></div></div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+var ps=[].slice.call(document.querySelectorAll('.packet')),t0=performance.now();
+function f(t){ps.forEach(function(p){var e=document.getElementById(p.dataset.e),L=e.getTotalLength(),u=(((t-t0)/2200)+(+p.dataset.o||0))%1,pt=e.getPointAtLength(u*L);p.setAttribute('cx',pt.x);p.setAttribute('cy',pt.y);});if(!RM)requestAnimationFrame(f);}
+requestAnimationFrame(f);
+
+</script>
+</body>
+</html>

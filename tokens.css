@@ -1,0 +1,362 @@
+/* Business apps & agent dashboards design system — generated from tokens.json */
+:root, [data-theme="light"] {
+  --bg: #f6f6f4; /* App canvas behind every page. Never put body text directly on it in dense areas; use surface. */
+  --surface: #ffffff; /* Cards, tables, panels, sidebar. The default container for content. */
+  --surface-sunken: #efefec; /* Wells inside a surface: code blocks, tool-call output, table header row, input groups. */
+  --surface-hover: #f2f2ef; /* Hover state for rows, nav items and ghost buttons. */
+  --border: #e2e2de; /* Default 1px hairline for cards, inputs, table rows. Borders, not shadows, separate in-flow content. */
+  --border-strong: #8f9097; /* Input and control borders (3:1 against surface), emphasized dividers. */
+  --fg: #18181b; /* Primary text and icons on bg, surface and surface-sunken. */
+  --fg-muted: #55575e; /* Secondary text: descriptions, table metadata, labels. Legible on bg, surface, surface-sunken. */
+  --fg-subtle: #6b6d74; /* Placeholders, timestamps, captions. 4.5:1 on surface in both themes; avoid on surface-sunken for long text. */
+  --primary: #2450d6; /* The one primary action per view, links, selected nav, focus. Pair text on it with on-primary. */
+  --primary-hover: #1c41b3; /* Hover/pressed state of primary fills. */
+  --on-primary: #ffffff; /* Text and icons on a primary fill. */
+  --primary-soft: #e9eefc; /* Selected rows, active nav item background, info banners. */
+  --primary-text: #1c3fae; /* Text on primary-soft; link text on surface. */
+  --agent: #3d4654; /* Agent identity and progress. Pair with a descriptive label or icon. */
+  --on-agent: #ffffff; /* Text and icons on an agent fill. */
+  --agent-soft: #eef0f3; /* Background of agent messages, insight cards and suggestion chips. */
+  --agent-text: #384454; /* Text on agent-soft. */
+  --success: #15803d; /* Completed steps, positive deltas, healthy status dots. */
+  --success-soft: #e6f5eb; /* Success badge and banner background. */
+  --success-text: #166534; /* Text on success-soft; positive delta text on surface. */
+  --warning: #b45309; /* Needs attention: pending approval, low confidence, nearing a limit. */
+  --warning-soft: #fdf2dc; /* Warning badge, approval card header, banner background. */
+  --warning-text: #8a3c0b; /* Text on warning-soft. */
+  --danger: #c42727; /* Destructive actions, failed runs, errors, negative deltas. */
+  --on-danger: #ffffff; /* Text on a danger fill. */
+  --danger-soft: #fdeaea; /* Error banner and failed badge background. */
+  --danger-text: #9f1c1c; /* Text on danger-soft; negative delta text on surface. */
+  --focus: #2450d6; /* 2px keyboard focus ring with a 2px offset in the page color. */
+  --chart-1: #2450d6; /* First series. Charts use chart-1..6 in order; never status colors for categories. */
+  --chart-2: #0f8f73; /* Second series. */
+  --chart-3: #e08a00; /* Third series. */
+  --chart-4: #8b5cf6; /* Fourth series. */
+  --chart-5: #d9466a; /* Fifth series. */
+  --chart-6: #64748b; /* Sixth series, or 'Other'. */
+  --overlay: rgba(16, 18, 24, 0.45); /* Scrim behind dialogs and drawers. */
+  --shadow-overlay: 0 8px 24px rgba(16, 18, 24, 0.12), 0 2px 6px rgba(16, 18, 24, 0.08); /* Only floating layers: menus, popovers, dialogs, toasts. In-flow cards use border, not shadow. */
+}
+[data-theme="dark"] {
+  --bg: #0e1014;
+  --surface: #16191f;
+  --surface-sunken: #121419;
+  --surface-hover: #1d2129;
+  --border: #2a2e37;
+  --border-strong: #6a707c;
+  --fg: #ececef;
+  --fg-muted: #a3a6ae;
+  --fg-subtle: #878b94;
+  --primary: #7090ff;
+  --primary-hover: #8ca6ff;
+  --on-primary: #0b1020;
+  --primary-soft: #1a2340;
+  --primary-text: #aabdff;
+  --agent: #bec8d6;
+  --on-agent: #202832;
+  --agent-soft: #242931;
+  --agent-text: #d6dee9;
+  --success: #4ade80;
+  --success-soft: #0f2a1a;
+  --success-text: #86efac;
+  --warning: #fbbf24;
+  --warning-soft: #33260b;
+  --warning-text: #fcd34d;
+  --danger: #f87171;
+  --on-danger: #2a0808;
+  --danger-soft: #3a1414;
+  --danger-text: #fca5a5;
+  --focus: #8ca6ff;
+  --chart-1: #7090ff;
+  --chart-2: #34d3a8;
+  --chart-3: #fbbf4a;
+  --chart-4: #b69cff;
+  --chart-5: #ff8aa6;
+  --chart-6: #9aa7ba;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+:root {
+  --space-1: 4px; /* Icon-to-label gap, badge padding. */
+  --space-2: 8px; /* Gap between related controls; compact cell padding. */
+  --space-3: 12px; /* Table cell horizontal padding; field label to input. */
+  --space-4: 16px; /* Card padding (compact), gap between form fields. */
+  --space-5: 20px; /* Card padding (default). */
+  --space-6: 24px; /* Gap between cards in a grid; page gutter on desktop. */
+  --space-8: 32px; /* Gap between page sections. */
+  --space-12: 48px; /* Empty-state vertical padding. */
+  --radius-sm: 4px; /* Badges, checkboxes, chips inside tables. */
+  --radius-md: 6px; /* Buttons, inputs, menus. */
+  --radius-lg: 10px; /* Cards, panels, dialogs, message bubbles. */
+  --radius-pill: 999px; /* Status dots, avatar, suggestion chips. */
+  --control-sm: 28px; /* Small buttons and inputs inside tables and toolbars. */
+  --control-md: 34px; /* Default button and input height. */
+  --control-lg: 40px; /* Primary form submit on sparse pages. */
+  --row-height: 44px; /* Default data-table row height; 36px in compact density. */
+  --sidebar-width: 240px; /* App sidebar width; collapses to 56px icons. */
+  --topbar-height: 52px; /* Top app bar height. */
+  --agent-panel-width: 400px; /* Docked agent chat panel on the right of a page. */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --text-text-display: 600 28px/36px var(--font-sans); /* One per page at most: dashboard or report title. */
+  --text-text-title: 600 20px/28px var(--font-sans); /* Page header title. */
+  --text-text-heading: 600 16px/24px var(--font-sans); /* Card and section headings. */
+  --text-text-body: 400 14px/20px var(--font-sans); /* Default UI text: forms, tables, messages. */
+  --text-text-body-strong: 500 14px/20px var(--font-sans); /* Labels, button text, emphasized cells. */
+  --text-text-small: 400 13px/18px var(--font-sans); /* Descriptions, helper text, secondary table text. */
+  --text-text-caption: 500 12px/16px var(--font-sans); /* Badges, column headers, axis labels. Never for paragraphs. */
+  --text-text-metric: 600 28px/32px var(--font-sans); /* KPI numbers on stat cards. Use tabular numerals. */
+  --text-text-mono: 400 12.5px/20px var(--font-mono); /* IDs, tool-call arguments, logs, code. */
+}
+.text-display {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.text-title {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.text-heading {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.text-body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.text-body-strong {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.text-small {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.text-caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.text-metric {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Generated token completion from tokens.json. */
+:root, [data-theme] {
+  --gray-0: #ffffff; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-25: #fcfbf7; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-50: #f7f6f3; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-100: #efeeea; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-200: #e0e0dc; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-300: #cbcac7; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-400: #a8a8a4; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-500: #81807d; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-600: #6c6c69; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-700: #5b5b58; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-800: #464542; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-900: #31302e; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-925: #272624; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-950: #1f1e1c; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-975: #181715; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --gray-990: #12120f; /* Primitive neutral. Reference through semantic tokens, never directly in components. */
+  --blue-50: #f3f7fe; /* Primitive blue. Reference through semantic tokens. */
+  --blue-100: #e3edff; /* Primitive blue. Reference through semantic tokens. */
+  --blue-200: #c8dcff; /* Primitive blue. Reference through semantic tokens. */
+  --blue-300: #a3c3fe; /* Primitive blue. Reference through semantic tokens. */
+  --blue-400: #71a3ff; /* Primitive blue. Reference through semantic tokens. */
+  --blue-500: #4985f7; /* Primitive blue. Reference through semantic tokens. */
+  --blue-600: #2e6ae1; /* Primitive blue. Reference through semantic tokens. */
+  --blue-700: #2356ba; /* Primitive blue. Reference through semantic tokens. */
+  --blue-800: #194395; /* Primitive blue. Reference through semantic tokens. */
+  --blue-900: #0f3174; /* Primitive blue. Reference through semantic tokens. */
+  --blue-950: #072154; /* Primitive blue. Reference through semantic tokens. */
+  --violet-50: #f7f5fe; /* Primitive violet. Reference through semantic tokens. */
+  --violet-100: #edeaff; /* Primitive violet. Reference through semantic tokens. */
+  --violet-200: #dcd4ff; /* Primitive violet. Reference through semantic tokens. */
+  --violet-300: #c5b6ff; /* Primitive violet. Reference through semantic tokens. */
+  --violet-400: #aa8eff; /* Primitive violet. Reference through semantic tokens. */
+  --violet-500: #936bf7; /* Primitive violet. Reference through semantic tokens. */
+  --violet-600: #7d4de0; /* Primitive violet. Reference through semantic tokens. */
+  --violet-700: #663eba; /* Primitive violet. Reference through semantic tokens. */
+  --violet-800: #502e95; /* Primitive violet. Reference through semantic tokens. */
+  --violet-900: #3c2173; /* Primitive violet. Reference through semantic tokens. */
+  --violet-950: #2a1454; /* Primitive violet. Reference through semantic tokens. */
+  --green-50: #eafded; /* Primitive green. Reference through semantic tokens. */
+  --green-100: #d6f7db; /* Primitive green. Reference through semantic tokens. */
+  --green-200: #b5eabf; /* Primitive green. Reference through semantic tokens. */
+  --green-300: #93d5a0; /* Primitive green. Reference through semantic tokens. */
+  --green-400: #66ba7a; /* Primitive green. Reference through semantic tokens. */
+  --green-500: #38a259; /* Primitive green. Reference through semantic tokens. */
+  --green-600: #048a3f; /* Primitive green. Reference through semantic tokens. */
+  --green-700: #057132; /* Primitive green. Reference through semantic tokens. */
+  --green-800: #015925; /* Primitive green. Reference through semantic tokens. */
+  --green-900: #01431b; /* Primitive green. Reference through semantic tokens. */
+  --green-950: #012e11; /* Primitive green. Reference through semantic tokens. */
+  --amber-50: #fff5eb; /* Primitive amber. Reference through semantic tokens. */
+  --amber-100: #ffe9d2; /* Primitive amber. Reference through semantic tokens. */
+  --amber-200: #ffd2a2; /* Primitive amber. Reference through semantic tokens. */
+  --amber-300: #f0b675; /* Primitive amber. Reference through semantic tokens. */
+  --amber-400: #da933c; /* Primitive amber. Reference through semantic tokens. */
+  --amber-500: #c17801; /* Primitive amber. Reference through semantic tokens. */
+  --amber-600: #a16302; /* Primitive amber. Reference through semantic tokens. */
+  --amber-700: #845001; /* Primitive amber. Reference through semantic tokens. */
+  --amber-800: #683e01; /* Primitive amber. Reference through semantic tokens. */
+  --amber-900: #4f2e00; /* Primitive amber. Reference through semantic tokens. */
+  --amber-950: #371f00; /* Primitive amber. Reference through semantic tokens. */
+  --red-50: #fff4f3; /* Primitive red. Reference through semantic tokens. */
+  --red-100: #fee7e4; /* Primitive red. Reference through semantic tokens. */
+  --red-200: #ffcdc8; /* Primitive red. Reference through semantic tokens. */
+  --red-300: #fea8a1; /* Primitive red. Reference through semantic tokens. */
+  --red-400: #f67972; /* Primitive red. Reference through semantic tokens. */
+  --red-500: #e4524f; /* Primitive red. Reference through semantic tokens. */
+  --red-600: #cb2f33; /* Primitive red. Reference through semantic tokens. */
+  --red-700: #a82428; /* Primitive red. Reference through semantic tokens. */
+  --red-800: #86191c; /* Primitive red. Reference through semantic tokens. */
+  --red-900: #670e12; /* Primitive red. Reference through semantic tokens. */
+  --red-950: #4b0509; /* Primitive red. Reference through semantic tokens. */
+  --teal-50: #e6fcf9; /* Primitive teal. Reference through semantic tokens. */
+  --teal-100: #cff7f0; /* Primitive teal. Reference through semantic tokens. */
+  --teal-200: #aae9e0; /* Primitive teal. Reference through semantic tokens. */
+  --teal-300: #83d4c9; /* Primitive teal. Reference through semantic tokens. */
+  --teal-400: #4cb9ad; /* Primitive teal. Reference through semantic tokens. */
+  --teal-500: #0aa093; /* Primitive teal. Reference through semantic tokens. */
+  --teal-600: #05857a; /* Primitive teal. Reference through semantic tokens. */
+  --teal-700: #066d64; /* Primitive teal. Reference through semantic tokens. */
+  --teal-800: #05554e; /* Primitive teal. Reference through semantic tokens. */
+  --teal-900: #00403b; /* Primitive teal. Reference through semantic tokens. */
+  --teal-950: #002c28; /* Primitive teal. Reference through semantic tokens. */
+  --rose-50: #fff4f5; /* Primitive rose. Reference through semantic tokens. */
+  --rose-100: #fee6e9; /* Primitive rose. Reference through semantic tokens. */
+  --rose-200: #ffcbd3; /* Primitive rose. Reference through semantic tokens. */
+  --rose-300: #fea5b5; /* Primitive rose. Reference through semantic tokens. */
+  --rose-400: #f07a93; /* Primitive rose. Reference through semantic tokens. */
+  --rose-500: #dd5476; /* Primitive rose. Reference through semantic tokens. */
+  --rose-600: #c4335e; /* Primitive rose. Reference through semantic tokens. */
+  --rose-700: #a2274c; /* Primitive rose. Reference through semantic tokens. */
+  --rose-800: #811c3b; /* Primitive rose. Reference through semantic tokens. */
+  --rose-900: #64112b; /* Primitive rose. Reference through semantic tokens. */
+  --rose-950: #48081c; /* Primitive rose. Reference through semantic tokens. */
+  --surface-pressed: var(--gray-100); /* Pressed (active) state for rows, ghost and secondary buttons. */
+  --fg-disabled: var(--gray-400); /* Disabled labels only (exempt from contrast; never for information). */
+  --primary-pressed: var(--blue-800); /* Pressed (active) state of primary fills. */
+  --agent-hover: #283140; /* Hover of agent fills. */
+  --agent-soft-hover: #e4e8ed; /* Hover of agent-soft fills (agent button, chips). */
+  --danger-hover: var(--red-700); /* Hover of danger fills. */
+  --button-primary-bg: var(--primary); /* Component token. Primary button fill. */
+  --button-primary-bg-hover: var(--primary-hover); /* Component token. Primary button hover. */
+  --button-primary-bg-pressed: var(--primary-pressed); /* Component token. Primary button pressed. */
+  --button-primary-fg: var(--on-primary); /* Component token. Primary button label. */
+  --button-secondary-bg: var(--surface); /* Component token. Secondary button fill. */
+  --button-secondary-bg-hover: var(--surface-hover); /* Component token. Secondary hover. */
+  --button-secondary-bg-pressed: var(--surface-pressed); /* Component token. Secondary pressed. */
+  --button-secondary-border: var(--border-strong); /* Component token. Secondary border. */
+  --button-secondary-fg: var(--fg); /* Component token. Secondary label. */
+  --button-agent-bg: var(--agent-soft); /* Component token. Agent button fill (soft, so it never competes with the one primary). */
+  --button-agent-bg-hover: var(--agent-soft-hover); /* Component token. Agent button hover. */
+  --button-agent-fg: var(--agent-text); /* Component token. Agent button label. */
+  --button-agent-solid-bg: var(--agent); /* Component token. Solid agent button: only the composer Send button. */
+  --button-agent-solid-bg-hover: var(--agent-hover); /* Component token. Solid agent button hover. */
+  --button-agent-solid-fg: var(--on-agent); /* Component token. Solid agent button label. */
+  --button-danger-bg: var(--danger); /* Component token. Danger button fill. */
+  --button-danger-bg-hover: var(--danger-hover); /* Component token. Danger hover. */
+  --button-danger-fg: var(--on-danger); /* Component token. Danger label. */
+  --input-bg: var(--surface); /* Component token. Input, select, textarea fill. */
+  --input-border: var(--border-strong); /* Component token. Input border at rest. */
+  --input-border-hover: var(--fg-subtle); /* Component token. Input border on hover. */
+  --input-border-focus: var(--primary); /* Component token. Input border when focused. */
+  --input-border-error: var(--danger); /* Component token. Input border when invalid. */
+  --input-fg: var(--fg); /* Component token. Input text. */
+  --input-placeholder: var(--fg-subtle); /* Component token. Placeholder text. */
+  --input-bg-disabled: var(--surface-sunken); /* Component token. Disabled and read-only fill. */
+  --control-checked-bg: var(--primary); /* Component token. Checked checkbox, radio, switch. */
+  --control-checked-fg: var(--on-primary); /* Component token. Check mark on a checked control. */
+  --card-bg: var(--surface); /* Component token. Card fill. */
+  --card-border: var(--border); /* Component token. Card border. */
+  --table-header-bg: var(--surface-sunken); /* Component token. Table header row. */
+  --table-row-hover: var(--surface-hover); /* Component token. Row hover. */
+  --table-row-selected: var(--primary-soft); /* Component token. Selected row. */
+  --table-border: var(--border); /* Component token. Row dividers. */
+  --nav-item-fg: var(--fg-muted); /* Component token. Sidebar item at rest. */
+  --nav-item-active-bg: var(--primary-soft); /* Component token. Current sidebar item fill. */
+  --nav-item-active-fg: var(--primary-text); /* Component token. Current sidebar item label. */
+  --tab-indicator: var(--primary); /* Component token. Selected tab underline. */
+  --agent-avatar-bg: var(--agent); /* Component token. Agent avatar. */
+  --agent-message-user-bg: var(--surface-sunken); /* Component token. User turn bubble. */
+  --agent-chip-bg: var(--agent-soft); /* Component token. Suggestion chip. */
+  --agent-chip-fg: var(--agent-text); /* Component token. Suggestion chip label. */
+  --approval-header-bg: var(--warning-soft); /* Component token. Approval card header. */
+  --approval-header-fg: var(--warning-text); /* Component token. Approval card header text. */
+  --insight-label-fg: var(--agent-text); /* Component token. Insight label. */
+  --tooltip-bg: var(--fg); /* Component token. Tooltip fill (inverted). */
+  --tooltip-fg: var(--surface); /* Component token. Tooltip text. */
+  --overlay-bg: var(--overlay); /* Component token. Dialog and drawer scrim. */
+  --popover-bg: var(--surface); /* Component token. Menus, popovers, dialogs. */
+  --focus-ring: var(--focus); /* Component token. Focus outline on every interactive element. */
+  --terminal-bg: var(--gray-990); /* Component token (Expressive). Terminal background. Theme-independent: the terminal is always dark. */
+  --terminal-fg: var(--gray-50); /* Component token (Expressive). Terminal text. */
+  --terminal-border: var(--gray-925); /* Component token (Expressive). Terminal border and header divider. */
+  --terminal-muted: var(--gray-400); /* Component token (Expressive). Timestamps and secondary terminal text (4.5:1 on terminal-bg). */
+  --terminal-ok: var(--green-300); /* Component token (Expressive). Success lines in the terminal. */
+  --terminal-warn: var(--amber-300); /* Component token (Expressive). Warning lines in the terminal. */
+  --terminal-agent: var(--violet-300); /* Component token (Expressive). Agent lines and the live dot in the terminal. */
+  --space-0: 0px; /* Reset. */
+  --space-1-5: 6px; /* Label to input gap; badge dot gap. */
+  --space-10: 40px; /* Large section padding on dashboards. */
+  --space-16: 64px; /* Page top padding on sparse marketing-style pages only. */
+  --shadow-raised: 0 1px 2px rgba(16, 18, 24, 0.06); /* Only for draggable cards and sticky footers lifting off content. */
+  --bp-sm: 640px; /* Large phones, landscape. Forms go two-column above this only if fields are short. */
+  --bp-md: 768px; /* Tablets. Sidebar drawer becomes an icon rail. */
+  --bp-lg: 1024px; /* Laptops. Full sidebar; 2-column card grids. */
+  --bp-xl: 1280px; /* Desktops. Agent panel docks instead of overlaying; 4-up KPI row. */
+  --bp-2xl: 1536px; /* Wide screens. Content caps at 1440px and centers. */
+  --z-sticky: 10; /* Sticky table headers, sticky form footers. */
+  --z-nav: 20; /* Sidebar and top bar. */
+  --z-drawer: 30; /* Drawers and the overlaid agent panel. */
+  --z-dialog: 40; /* Dialogs and their scrim. */
+  --z-popover: 50; /* Menus, selects, tooltips (above dialogs). */
+  --z-toast: 60; /* Toasts, always on top. */
+  --duration-fast: 120ms; /* Hover and pressed color changes. */
+  --duration-base: 200ms; /* Menus, tooltips, switches. */
+  --duration-slow: 280ms; /* Drawers and dialogs entering. */
+}
+[data-theme="dark"] {
+  --surface-pressed: var(--gray-925);
+  --fg-disabled: var(--gray-700);
+  --primary-pressed: var(--blue-200);
+  --agent-hover: #d6dce5;
+  --agent-soft-hover: #2f3742;
+  --danger-hover: var(--red-300);
+  --shadow-raised: 0 1px 2px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,21 @@
+<!-- @dsCard group="Expressive" height=150 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SlidingTabs — preview</title><link rel="stylesheet" href="../../components/expressive.css?v=2.11.1"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../tokens.css?v=2.11.1"><link rel="stylesheet" href="../bundle.css?v=2.11.1"><link rel="stylesheet" href="../expressive.css?v=2.11.1"></head>
+<body>
+<div class="m-stage col">
+<div class="x-tabs" role="tablist" aria-label="Range" data-x-tabs><span class="x-tabs-ind" aria-hidden="true"></span><button role="tab" aria-selected="false">Today</button><button role="tab" aria-selected="true">This week</button><button role="tab" aria-selected="false">This month</button><button role="tab" aria-selected="false">Quarter</button></div>
+<div class="x-underline-tabs" role="tablist" aria-label="Invoice" data-x-tabs style="max-width:460px"><span class="x-tabs-ind" aria-hidden="true"></span><button class="m-tab" role="tab" aria-selected="true">Overview</button><button class="m-tab" role="tab" aria-selected="false">Line items</button><button class="m-tab" role="tab" aria-selected="false">Activity</button><button class="m-tab" role="tab" aria-selected="false">Agent log</button></div>
+</div>
+<script>
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.querySelectorAll('[data-x-tabs]').forEach(function(g){var ind=g.querySelector('.x-tabs-ind'),bs=[].slice.call(g.querySelectorAll('[role=tab]'));
+function place(b){ind.style.width=b.offsetWidth+'px';ind.style.transform='translateX('+(b.offsetLeft)+'px)';}
+function sel(b){bs.forEach(function(x){x.setAttribute('aria-selected',x===b);x.tabIndex=x===b?0:-1;});place(b);}
+bs.forEach(function(b,i){b.onclick=function(){sel(b);};b.onkeydown=function(e){var n=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(n){var t=bs[(i+n+bs.length)%bs.length];sel(t);t.focus();}};});
+var cur=bs.filter(function(b){return b.getAttribute('aria-selected')==='true';})[0];ind.style.transition='none';sel(cur);requestAnimationFrame(function(){ind.style.transition='';});});
+
+</script>
+</body>
+</html>
